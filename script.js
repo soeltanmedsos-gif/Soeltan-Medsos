@@ -14,7 +14,7 @@
 // --- PENGATURAN PENTING (Untuk diubah oleh Developer) ---
 
 // Ganti dengan URL DEPLOYMENT BARU Anda setelah mendeploy ulang script Google
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzbfx1umeQG4P5LmOqO8pyCf_9Z_yrWmeFeckKxJwKp2wB9lzMvM5fZRLCUhMPkhcXhsQ/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwObAC9_BeC17_kdn5Tnxh36jBTv6LEhIKRMqOouhROeGA1c3Fj1v0hAQ5ZJMw6K5Re6A/exec';
 
 // Ganti dengan nomor WhatsApp ADMIN UTAMA untuk pertanyaan layanan
 const ADMIN_WHATSAPP = '6281252835832'; 
