@@ -138,7 +138,7 @@ function showCheckoutForm() {
                 <p class="text-center text-slate-300 mb-3">Total: <strong class="text-blue-400 text-base">Rp ${total.toLocaleString('id-ID')}</strong></p>
                 <div class="text-center mb-3"> 
                     <p class="text-xs text-slate-400 mb-2">Scan QRIS di bawah ini</p>
-                    <img src="GambarQris" alt="QRIS Payment" class="mx-auto w-48 h-48 rounded-lg bg-white p-1">
+                    <img src="qrcode.png" alt="QRIS Payment" class="mx-auto w-48 h-48 rounded-lg bg-white p-1">
                 </div>
                 <div class="mt-4 text-slate-300">
                     <p class="text-xs text-center text-slate-400 mb-2">Atau Transfer Manual ke:</p>
