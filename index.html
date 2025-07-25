@@ -29,8 +29,7 @@
 </head>
 
 <body class="bg-slate-950 text-slate-300">
-<!-- Navbar -->
-    <nav class="sticky top-0 z-40 bg-slate-950/80 backdrop-blur-sm border-b border-slate-800">
+<nav class="sticky top-0 z-40 bg-slate-950/80 backdrop-blur-sm border-b border-slate-800">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between h-16">
                 <a href="#" class="text-xl font-bold text-white">Soeltan<span class="text-blue-500">Medsos</span></a>
@@ -41,7 +40,6 @@
                         <a href="#faq" class="text-sm font-medium text-slate-300 hover:text-blue-500 transition-colors">FAQ</a>
                     </div>
 
-                    <!-- Tombol Keranjang -->
                     <button onclick="showCartModal()" class="relative text-white p-2 rounded-full hover:bg-slate-800 transition-colors ml-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                         <span id="cart-count" class="absolute -top-1 -right-1 bg-blue-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
@@ -58,9 +56,8 @@
             <a href="#faq" class="block text-sm py-3 px-4 text-slate-300 hover:bg-slate-800 hover:text-blue-500 transition-colors">FAQ</a>
         </div>
     </nav>
-
+<!-- Tempat logo dan slogan -->
     <div class="container mx-auto px-4 sm:px-6 py-12">
-        <!-- Tempat Logo dan Slogan -->
         <header class="text-center my-12 md:my-16">
             <img src="LOGO-.png" alt="Logo Soeltan Medsos - Jasa Media Sosial" class="mx-auto mb-8 w-48 md:w-64">
             <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
@@ -70,7 +67,6 @@
                 SMM Panel dengan layanan cepat, aman, dan terpercaya untuk semua kebutuhan sosial media anda
             </p>
         </header>
-        <!-- Tambahan -->
         <section id="keunggulan" class="my-16 md:my-24">
             <h2 class="text-2xl font-bold text-center mb-12 text-white">Kenapa Memilih <span class="text-blue-500">Soeltan Medsos?</span></h2>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -96,7 +92,7 @@
                 </div>
             </div>
         </section>
-        <!-- Tempat Tutorial -->
+        <!-- Tempat tutorial pembelian -->
         <section id="cara-order" class="my-16 md:my-24 max-w-4xl mx-auto bg-slate-900 p-6 sm:p-8 rounded-xl border border-slate-800">
             <h2 class="text-2xl font-bold text-center mb-8 text-blue-500">3 Langkah Mudah Pemesanan</h2>
             <div class="grid md:grid-cols-3 gap-6 text-center">
@@ -116,10 +112,30 @@
                     <p class="text-slate-400 text-sm">Lakukan pembayaran dan kirimkan bukti transfer untuk diproses.</p>
                 </div>
             </div> 
-            <!-- Tempat Menaruh Link Video ganti(#) Dengan Link nya -->
+            <!-- Info order -->
+            <div class="mt-8 pt-6 border-t border-slate-700">
+                <h3 class="text-center font-semibold text-lg text-blue-400 mb-4">INFO ORDER</h3>
+                <ul class="space-y-2 text-sm text-slate-400 max-w-xl mx-auto text-left">
+                    <li><span class="font-semibold text-slate-300 w-36 inline-block">Non Drop</span>: 99,9% Pesanan tidak akan mengalami penurunan</li>
+                    <li><span class="font-semibold text-slate-300 w-36 inline-block">30 Days Refil</span>: Garansi Refil 30 hari</li>
+                    <li><span class="font-semibold text-slate-300 w-36 inline-block">Start Time 1 - 4Hours</span>: Pengerjaan pesanan di mulai setelah 1 - 4 jam</li>
+                    <li><span class="font-semibold text-slate-300 w-36 inline-block">Global</span>: Akun mix dari beberapa negara</li>
+                    <li><span class="font-semibold text-slate-300 w-36 inline-block">HQ</span>: High Quality</li>
+                    <li><span class="font-semibold text-slate-300 w-36 inline-block">HQ Real</span>: High Quality Real Account</li>
+                    <li><span class="font-semibold text-slate-300 w-36 inline-block">No Refil</span>: Order tidak termasuk garansi refil</li>
+                    <li><span class="font-semibold text-slate-300 w-36 inline-block">High Drop Probability</span>: Retensi Drop Tinggi</li>
+                </ul>
+                <h3 class="text-center font-semibold text-lg text-blue-400 mt-6 mb-4">NOTE</h3>
+                <ul class="space-y-2 text-sm text-slate-400 max-w-xl mx-auto text-left">
+                    <li>Isi link sesuai dengan order yang di pesan.</li>
+                    <li><span class="font-semibold text-slate-300">Link postingan/video</span> untuk like, view, share, dan lain - lain.</li>
+                    <li><span class="font-semibold text-slate-300">Link Profil</span> untuk followers dan subscriber.</li>
+                </ul>
+            </div>
+            <!-- Tempat Menaruh link video ganti # dengan link video -->
             <div class="text-center mt-8 pt-6 border-t border-slate-700">
                 <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors font-semibold">
-                    Masih bingung?  Tonton tutorial pemesanan lengkap di sini klik ini
+                    Masih bingung? Tonton tutorial pemesanan lengkap di sini klik ini
                 </a>
             </div>
             <div class="mt-8 border-t border-dashed border-slate-700 pt-6">
@@ -129,10 +145,9 @@
                 </p>
             </div>
         </section>
-        <!-- Daftar Harga -->
-        <section id="harga" class="my-16 md:my-24">
+        <!-- Tempat Tiktok -->
+        <section id="harga" class="my-16 md:my-24">   
             <h2 class="text-3xl font-bold text-center mb-12 text-white">Daftar Layanan</h2>
-            <!-- Tiktok -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold mb-6 text-blue-500">Layanan TikTok</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -155,7 +170,7 @@
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between"><div><h4 class="font-semibold text-white">Tiktok View (FAST)</h4><p class="text-xs text-slate-400 mb-3">(Instan Start) (Non Drop) (Unlimited)</p><p class="text-xl font-bold text-blue-500">Rp 10 <span class="text-sm font-normal text-slate-400">/100</span></p></div><div class="flex items-center mt-4"><input type="number" value="1" min="1" class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button onclick="addToCart(this, 'Tiktok View (FAST)', 10)" class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button></div></div>
                 </div>
             </div>
-            <!-- Instagram -->
+            <!-- Tempat Instagram -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold mb-6 text-pink-500">Layanan Instagram</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -178,7 +193,7 @@
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between"><div><h4 class="font-semibold text-white">Instagram View</h4><p class="text-xs text-slate-400 mb-3">(All Video Link)</p><p class="text-xl font-bold text-pink-500">Rp 80 <span class="text-sm font-normal text-slate-400">/100</span></p></div><div class="flex items-center mt-4"><input type="number" value="1" min="1" class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button onclick="addToCart(this, 'Instagram View', 80)" class="flex-1 text-center bg-slate-800 text-pink-400 font-semibold py-2 rounded-r-lg hover:bg-pink-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button></div></div>
                 </div>
             </div>
-            <!-- Youtube -->
+            <!-- Tempat Youtube -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold mb-6 text-red-500">Layanan Youtube</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -194,7 +209,7 @@
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between"><div><h4 class="font-semibold text-white">Youtube View Jam Tayang (60 min video)</h4><p class="text-xs text-slate-400 mb-3">(Speed 100/Hours)(30 days refil)</p><p class="text-xl font-bold text-red-500">Rp 13000 <span class="text-sm font-normal text-slate-400">/100</span></p></div><div class="flex items-center mt-4"><input type="number" value="1" min="1" class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button onclick="addToCart(this, 'Youtube View Jam Tayang (60 min)', 13000)" class="flex-1 text-center bg-slate-800 text-red-400 font-semibold py-2 rounded-r-lg hover:bg-red-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button></div></div>
                 </div>
             </div>
-            <!-- Facebook -->
+            <!-- Tempat Fesnuk -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold mb-6 text-indigo-500">Layanan Facebook</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -207,7 +222,7 @@
                 </div>
             </div>
         </section>
-        <!-- Test Tistimoni -->
+        <!-- Tempat testimoni -->
         <section id="testimoni" class="my-16 md:my-24">
             <h2 class="text-2xl font-bold text-center mb-12 text-white">Apa Kata Pelanggan Kami?</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -228,7 +243,7 @@
                 </div>
             </div>
         </section>
-        <!-- Bagian FAQ -->
+        <!-- Tempat Faq -->
         <section id="faq" class="max-w-3xl mx-auto my-16 md:my-24">
             <h2 class="text-2xl font-bold text-center mb-8 text-white">Pertanyaan Umum</h2>
             <div class="space-y-4">
@@ -254,13 +269,13 @@
                 </details>
             </div>
         </section>
-
+<!-- Tempat question langsung ke wa -->
         <section class="text-center bg-blue-900/20 p-8 sm:p-10 rounded-xl border border-blue-800">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Ada Pertanyaan Lain?</h2>
             <p class="text-slate-400 mb-8 max-w-xl mx-auto">Jika Anda butuh bantuan atau ingin bertanya langsung, jangan ragu untuk menghubungi admin kami.</p>
             <a href="https://wa.me/6281252835382?text=Halo%20Soeltan%20Medsos,%20saya%20ingin%20bertanya%20tentang%20layanan." target="_blank" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20">Hubungi Admin di WhatsApp</a>
         </section>
-
+<!-- Tempat saya ngiklanin wkwkw -->
         <section id="jasa-website" class="text-center bg-gradient-to-r from-blue-900/30 to-slate-900 p-8 sm:p-10 rounded-xl border border-blue-800 my-16">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Butuh Website Profesional Seperti Ini?</h2>
             <p class="text-slate-400 mb-8 max-w-2xl mx-auto">Wujudkan ide Anda menjadi website profesional untuk toko online, portofolio, atau profil perusahaan. Harga terjangkau dengan pengerjaan cepat dan responsif.</p>
@@ -270,7 +285,7 @@
         </section>
 
     </div>
-
+<!-- Info media social -->
     <footer class="border-t border-slate-800 mt-16 md:mt-20 py-8">
         <div class="container mx-auto text-center text-slate-500 text-sm">
             <p class="mb-4">Temukan Kami di Sosial Media:</p>
@@ -282,9 +297,10 @@
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M16.6,5.33H13.88V15.7A2.23,2.23,0,1,1,11.65,13.5V11.12A4.63,4.63,0,1,0,16.27,15.7V9.21A5.33,5.33,0,0,0,21.6,3.92V7.13A2.13,2.13,0,0,1,19.47,9.21H16.6Z" /></svg>
                 </a>
                 <a href="https://youtube.com/@soeltanmedsos?si=tRiLEvdzrXKBVAuC" target="_blank" class="text-slate-400 hover:text-red-500 transition-colors" title="YouTube">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z" /></svg>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23-1.54.91-1.77 1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z" /></svg>
                 </a>
             </div>
+            <!-- Tempat Aplikasi -->
             <div class="mt-4">
                 <a href="Soeltan_Medsos.apk" class="inline-block bg-slate-800 text-slate-300 font-semibold py-2 px-4 rounded-lg hover:bg-slate-700 transition-colors">
                     Download Aplikasi
