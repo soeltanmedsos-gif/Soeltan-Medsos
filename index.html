@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soeltan Medsos | Jasa Followers, Like, View Media Sosial</title>
-    <meta name="description"
-        content="Tingkatkan popularitas media sosial Anda dengan jasa followers, like, view, dan jam tayang dari Soeltan Medsos. Layanan aman, cepat, dan terpercaya untuk TikTok, Instagram, Youtube, dan Facebook.">
-    <meta name="keywords"
-        content="jasa followers, beli like, tambah jam tayang, soeltan medsos, jasa tiktok, jasa instagram, followers murah, like indonesia, view youtube">
+    <meta name="description" content="Tingkatkan popularitas media sosial Anda dengan jasa followers, like, view, dan jam tayang dari Soeltan Medsos. Layanan aman, cepat, dan terpercaya untuk TikTok, Instagram, Youtube, dan Facebook.">
+    <meta name="keywords" content="jasa followers, beli like, tambah jam tayang, soeltan medsos, jasa tiktok, jasa instagram, followers murah, like indonesia, view youtube">
     <link rel="icon" type="image/png" href="LOGO-.png">
     <link rel="canonical" href="https://www.domainsultanmedsos.com/">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,1042 +17,179 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #020617;
-            color: #cbd5e1;
+            background-color: #f8fafc; /* bg-slate-50 */
+            color: #334155; /* text-slate-700 */
         }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #e2e8f0; } /* bg-slate-200 */
+        ::-webkit-scrollbar-thumb { background: #14b8a6; border-radius: 10px; } /* bg-teal-500 */
 
-        ::-webkit-scrollbar {
-            width: 8px;
+        .form-input {
+            width: 100%;
+            background-color: #f1f5f9; /* bg-slate-100 */
+            border: 1px solid #cbd5e1; /* border-slate-300 */
+            border-radius: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            color: #1e293b; /* text-slate-800 */
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
-
-        ::-webkit-scrollbar-track {
-            background: #0f172a;
+        .form-input:focus {
+            outline: none;
+            border-color: #0d9488; /* border-teal-600 */
+            box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2); 
         }
-
-        ::-webkit-scrollbar-thumb {
-            background: #1e40af;
-            border-radius: 10px;
+        .form-input:disabled {
+            background-color: #e2e8f0; /* bg-slate-200 */
+            cursor: not-allowed;
         }
     </style>
 </head>
 
-<body class="bg-slate-950 text-slate-300">
-    <nav class="sticky top-0 z-40 bg-slate-950/80 backdrop-blur-sm border-b border-slate-800">
+<body class="bg-slate-50 text-slate-700">
+
+    <nav class="sticky top-0 z-40 bg-white/80 backdrop-blur-sm border-b border-slate-200">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between h-16">
-                <a href="#" class="text-xl font-bold text-white">Soeltan<span class="text-blue-500">Medsos</span></a>
+                <a href="#" class="text-xl font-bold text-slate-900">Soeltan<span class="text-teal-600">Medsos</span></a>
                 <div class="flex items-center">
                     <div class="hidden md:flex items-center space-x-8">
-                        <a href="#keunggulan"
-                            class="text-sm font-medium text-slate-300 hover:text-blue-500 transition-colors">Keunggulan</a>
-                        <a href="#harga"
-                            class="text-sm font-medium text-slate-300 hover:text-blue-500 transition-colors">Layanan</a>
-                        <a href="#faq"
-                            class="text-sm font-medium text-slate-300 hover:text-blue-500 transition-colors">FAQ</a>
+                        <a href="#keunggulan" class="text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors">Keunggulan</a>
+                        <a href="#buat-pesanan" class="text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors">Layanan</a>
+                        <a href="#faq" class="text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors">FAQ</a>
                     </div>
-
-                    <button onclick="showCartModal()"
-                        class="relative text-white p-2 rounded-full hover:bg-slate-800 transition-colors ml-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
-                        <span id="cart-count"
-                            class="absolute -top-1 -right-1 bg-blue-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    <button onclick="showCartModal()" class="relative text-slate-600 p-2 rounded-full hover:bg-slate-200 transition-colors ml-4" aria-label="Tampilkan Keranjang">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                        <span id="cart-count" class="absolute -top-1 -right-1 bg-teal-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
                     </button>
-                    <button id="mobile-menu-button"
-                        class="md:hidden ml-2 text-white p-2 rounded-full hover:bg-slate-800 transition-colors">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
+                    <button id="mobile-menu-button" class="md:hidden ml-2 text-slate-600 p-2 rounded-full hover:bg-slate-200 transition-colors" aria-label="Buka Menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </button>
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800">
-            <a href="#keunggulan"
-                class="block text-sm py-3 px-4 text-slate-300 hover:bg-slate-800 hover:text-blue-500 transition-colors">Keunggulan</a>
-            <a href="#harga"
-                class="block text-sm py-3 px-4 text-slate-300 hover:bg-slate-800 hover:text-blue-500 transition-colors">Layanan</a>
-            <a href="#faq"
-                class="block text-sm py-3 px-4 text-slate-300 hover:bg-slate-800 hover:text-blue-500 transition-colors">FAQ</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+            <a href="#keunggulan" class="block text-sm py-3 px-4 text-slate-600 hover:bg-slate-100 hover:text-teal-600 transition-colors">Keunggulan</a>
+            <a href="#buat-pesanan" class="block text-sm py-3 px-4 text-slate-600 hover:bg-slate-100 hover:text-teal-600 transition-colors">Layanan</a>
+            <a href="#faq" class="block text-sm py-3 px-4 text-slate-600 hover:bg-slate-100 hover:text-teal-600 transition-colors">FAQ</a>
         </div>
     </nav>
-    <!-- Tempat logo dan slogan -->
-    <div class="container mx-auto px-4 sm:px-6 py-12">
+    
+    <main class="container mx-auto px-4 sm:px-6 py-12">
+<!-- Tempat Slogan -->
         <header class="text-center my-12 md:my-16">
-            <img src="LOGO-.png" alt="Logo Soeltan Medsos - Jasa Media Sosial" class="mx-auto mb-8 w-48 md:w-64">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-                Tingkatkan Engagement Media Sosial Anda
-            </h1>
-            <p class="text-base md:text-lg text-slate-400 max-w-2xl mx-auto">
-                SMM Panel dengan layanan cepat, aman, dan terpercaya untuk semua kebutuhan sosial media anda
-            </p>
+            <img src="LOGO-.png" alt="Logo Soeltan Medsos" class="mx-auto mb-8 w-48 md:w-64">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4">Tingkatkan Engagement Media Sosial Anda</h1>
+            <p class="text-base md:text-lg text-slate-600 max-w-2xl mx-auto">SMM Panel dengan layanan cepat, aman, dan terpercaya untuk semua kebutuhan sosial media anda.</p>
         </header>
+
         <section id="keunggulan" class="my-16 md:my-24">
-            <h2 class="text-2xl font-bold text-center mb-12 text-white">Kenapa Memilih <span
-                    class="text-blue-500">Soeltan Medsos?</span></h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-                <div class="bg-slate-900 p-6 rounded-lg text-center border border-slate-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto text-blue-500 mb-4" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                    <h3 class="text-lg font-semibold mb-2 text-white">Aman & Terpercaya</h3>
-                    <p class="text-slate-400 text-sm">Proses 100% aman tanpa memerlukan password atau akses login ke
-                        akun Anda.</p>
-                </div>
-                <div class="bg-slate-900 p-6 rounded-lg text-center border border-slate-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto text-blue-500 mb-4" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                    </svg>
-                    <h3 class="text-lg font-semibold mb-2 text-white">Kualitas Terbaik</h3>
-                    <p class="text-slate-400 text-sm">Menyediakan layanan dari akun real dan aktif untuk hasil yang
-                        lebih natural.</p>
-                </div>
-                <div class="bg-slate-900 p-6 rounded-lg text-center border border-slate-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto text-blue-500 mb-4" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                    <h3 class="text-lg font-semibold mb-2 text-white">Proses Cepat</h3>
-                    <p class="text-slate-400 text-sm">Banyak layanan kami diproses secara instan setelah pesanan
-                        dikonfirmasi.</p>
-                </div>
-                <div class="bg-slate-900 p-6 rounded-lg text-center border border-slate-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto text-blue-500 mb-4" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                    <h3 class="text-lg font-semibold mb-2 text-white">Support Responsif</h3>
-                    <p class="text-slate-400 text-sm">Tim kami siap membantu Anda melalui WhatsApp untuk konsultasi dan
-                        pertanyaan.</p>
-                </div>
+            <h2 class="text-2xl font-bold text-center mb-12 text-slate-900">Kenapa Memilih <span class="text-teal-600">Soeltan Medsos?</span></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <div class="bg-white p-6 rounded-lg text-center border border-slate-200 shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto text-teal-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg><h3 class="text-lg font-semibold mb-2 text-slate-900">Aman & Terpercaya</h3><p class="text-slate-600 text-sm">Proses 100% aman tanpa password.</p></div>
+                <div class="bg-white p-6 rounded-lg text-center border border-slate-200 shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto text-teal-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg><h3 class="text-lg font-semibold mb-2 text-slate-900">Kualitas Terbaik</h3><p class="text-slate-600 text-sm">Layanan dari akun real dan aktif.</p></div>
+                <div class="bg-white p-6 rounded-lg text-center border border-slate-200 shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto text-teal-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg><h3 class="text-lg font-semibold mb-2 text-slate-900">Proses Cepat</h3><p class="text-slate-600 text-sm">Layanan diproses instan setelah konfirmasi.</p></div>
+                <div class="bg-white p-6 rounded-lg text-center border border-slate-200 shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto text-teal-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg><h3 class="text-lg font-semibold mb-2 text-slate-900">Support Responsif</h3><p class="text-slate-600 text-sm">Tim siap membantu Anda via WhatsApp.</p></div>
             </div>
         </section>
-        <!-- Tempat tutorial pembelian -->
-        <section id="cara-order"
-            class="my-16 md:my-24 max-w-4xl mx-auto bg-slate-900 p-6 sm:p-8 rounded-xl border border-slate-800">
-            <h2 class="text-2xl font-bold text-center mb-8 text-blue-500">3 Langkah Mudah Pemesanan</h2>
-            <div class="grid md:grid-cols-3 gap-6 text-center">
-                <div class="flex flex-col items-center">
-                    <div
-                        class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-3">
-                        1</div>
-                    <h3 class="font-semibold text-lg mb-2 text-white">Pilih Layanan</h3>
-                    <p class="text-slate-400 text-sm">Pilih layanan yang Anda butuhkan dan klik tombol 'Tambah'.</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div
-                        class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-3">
-                        2</div>
-                    <h3 class="font-semibold text-lg mb-2 text-white">Isi Data & Checkout</h3>
-                    <p class="text-slate-400 text-sm">Klik ikon keranjang, periksa pesanan, lalu isi data diri dan link
-                        target Anda.</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div
-                        class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-3">
-                        3</div>
-                    <h3 class="font-semibold text-lg mb-2 text-white">Bayar & Konfirmasi</h3>
-                    <p class="text-slate-400 text-sm">Lakukan pembayaran dan kirimkan bukti transfer untuk diproses.</p>
+<!-- Tempat Tutorial Beli -->
+        <section id="info-pemesanan" class="my-16 md:my-24">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-center mb-12 text-slate-900">3 Langkah Mudah Pemesanan</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="relative"><div class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 bg-teal-500 text-white font-bold rounded-full flex items-center justify-center border-4 border-slate-50">1</div><div class="bg-white p-6 pt-8 rounded-lg border border-slate-200 shadow-sm"><h3 class="font-semibold text-slate-900 text-lg mb-2">Pilih Layanan</h3><p class="text-sm text-slate-600">Pilih platform (TikTok, IG, dll), lalu pilih layanan spesifik yang Anda butuhkan dari dropdown.</p></div></div>
+                    <div class="relative"><div class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 bg-teal-500 text-white font-bold rounded-full flex items-center justify-center border-4 border-slate-50">2</div><div class="bg-white p-6 pt-8 rounded-lg border border-slate-200 shadow-sm"><h3 class="font-semibold text-slate-900 text-lg mb-2">Isi Data & Jumlah</h3><p class="text-sm text-slate-600">Masukkan jumlah pesanan dan link target pada kolom yang tersedia.</p></div></div>
+                    <div class="relative"><div class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 bg-teal-500 text-white font-bold rounded-full flex items-center justify-center border-4 border-slate-50">3</div><div class="bg-white p-6 pt-8 rounded-lg border border-slate-200 shadow-sm"><h3 class="font-semibold text-slate-900 text-lg mb-2">Bayar & Konfirmasi</h3><p class="text-sm text-slate-600">Klik 'Masukan Keranjang', lanjutkan pembayaran, isi data diri, lalu unggah bukti transfer.</p></div></div>
                 </div>
             </div>
-            <!-- Info order -->
-            <div class="mt-8 pt-6 border-t border-slate-700">
-                <h3 class="text-center font-semibold text-lg text-blue-400 mb-4">INFO ORDER</h3>
-                <ul class="space-y-2 text-sm text-slate-400 max-w-xl mx-auto text-left">
-                    <li><span class="font-semibold text-slate-300 w-36 inline-block">Non Drop</span>: 99,9% Pesanan
-                        tidak akan mengalami penurunan</li>
-                    <li><span class="font-semibold text-slate-300 w-36 inline-block">30 Days Refil</span>: Garansi Refil
-                        30 hari</li>
-                    <li><span class="font-semibold text-slate-300 w-36 inline-block">Start Time 1 - 4Hours</span>:
-                        Pengerjaan pesanan di mulai setelah 1 - 4 jam</li>
-                    <li><span class="font-semibold text-slate-300 w-36 inline-block">Mix</span>: Akun global campuran
-                        dari
-                        beberapa negara</li>
-                    <li><span class="font-semibold text-slate-300 w-36 inline-block">HQ</span>: High Quality</li>
-                    <li><span class="font-semibold text-slate-300 w-36 inline-block">HQ Real</span>: High Quality Real
-                        Account</li>
-                    <li><span class="font-semibold text-slate-300 w-36 inline-block">No Refil</span>: Order tidak
-                        termasuk garansi refil</li>
-                    <li><span class="font-semibold text-slate-300 w-36 inline-block">High Drop Probability</span>:
-                        Retensi Drop Tinggi</li>
-                </ul>
-                <h3 class="text-center font-semibold text-lg text-blue-400 mt-6 mb-4">NOTE</h3>
-                <ul class="space-y-2 text-sm text-slate-400 max-w-xl mx-auto text-left">
-                    <li>Isi link sesuai dengan order yang di pesan.</li>
-                    <li><span class="font-semibold text-slate-300">Link postingan/video</span> untuk like, view, share,
-                        dan lain - lain.</li>
-                    <li><span class="font-semibold text-slate-300">Link Profil</span> untuk followers dan subscriber.
-                    </li>
-                </ul>
+            <div class="max-w-4xl mx-auto mt-16 bg-white p-8 rounded-lg border border-slate-200 shadow-sm">
+                <h3 class="text-xl font-bold text-center text-slate-900 mb-6">Informasi & Catatan Penting</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm">
+                    <div><strong class="text-slate-800">Non Drop :</strong><span class="text-slate-600"> 99,9% Pesanan tidak akan mengalami penurunan.</span></div>
+                    <div><strong class="text-slate-800">30 Days Refil :</strong><span class="text-slate-600"> Garansi isi ulang selama 30 hari.</span></div>
+                    <div><strong class="text-slate-800">Start Time :</strong><span class="text-slate-600"> Pengerjaan pesanan dimulai setelah 1 - 4 jam.</span></div>
+                    <div><strong class="text-slate-800">HQ :</strong><span class="text-slate-600"> High Quality.</span></div>
+                    <div><strong class="text-slate-800">No Refil :</strong><span class="text-slate-600"> Order tidak termasuk garansi refil.</span></div>
+                    <div><strong class="text-slate-800">High Drop :</strong><span class="text-slate-600"> Memiliki potensi penurunan yang tinggi.</span></div>
+                </div>
+                <div class="mt-6 pt-6 border-t border-slate-200"><p class="font-semibold text-slate-800">NOTE:</p><ul class="list-disc list-inside text-sm text-slate-600 mt-2 space-y-1"><li>Isi link sesuai dengan order yang di pesan.</li><li><strong class="text-slate-700">Link postingan/video</strong> untuk pesanan like, view, share, dan lain-lain.</li><li><strong class="text-slate-700">Link Profil</strong> untuk pesanan followers dan subscriber.</li></ul></div>
+                <div class="mt-6 text-center"><a href="#" class="text-sm font-semibold text-teal-600 hover:text-teal-700">Masih bingung? Tonton tutorial pemesanan lengkap di sini</a></div>
             </div>
-            <!-- Tempat Menaruh link video ganti # dengan link video -->
-            <div class="text-center mt-8 pt-6 border-t border-slate-700">
-                <a href="https://www.youtube.com/watch?v=QmJXCKx71gg"
-                    class="text-blue-400 hover:text-blue-300 transition-colors font-semibold">
-                    Masih bingung? Tonton tutorial pemesanan lengkap di sini klik ini
-                </a>
-            </div>
-            <div class="mt-8 border-t border-dashed border-slate-700 pt-6">
-                <h3 class="text-center font-semibold text-base text-amber-400 mb-2">*INFO PENTING*</h3>
-                <p class="text-center text-slate-400 text-xs sm:text-sm">
-                    Proses harap sabar (estimasi 30 menit - 48 jam). Kesalahan penulisan link/username bukan tanggung
-                    jawab kami. Jika server problem, mohon untuk menunggu dengan sabar.
-                </p>
+<!-- Tempat Naruh Link Video -->
+            <div class="max-w-4xl mx-auto mt-8 text-center bg-yellow-100 border border-yellow-300 text-yellow-800 text-sm px-4 py-3 rounded-lg"><strong class="font-bold">*INFO PENTING*</strong><p class="block sm:inline">Proses harap sabar (estimasi 30 menit - 48 jam). Kesalahan penulisan link/username bukan tanggung jawab kami.</p></div>
+        </section>
+<!-- Tempat Pemesanan -->
+        <section id="buat-pesanan" class="my-16 md:my-24 max-w-2xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-teal-600">Buat Pesanan Baru</h2>
+            <div class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-lg">
+                <form id="order-form" onsubmit="event.preventDefault(); handleAddToCart();" novalidate class="space-y-5">
+                    <div><label for="platform-select" class="block text-sm font-medium text-slate-700 mb-1">1. Pilih Platform</label><select id="platform-select" class="form-input" required><option value="">-- Pilih Platform --</option><option value="TikTok">TikTok</option><option value="Instagram">Instagram</option><option value="YouTube">YouTube</option><option value="Facebook">Facebook</option></select></div>
+                    <div><label for="service-dropdown" class="block text-sm font-medium text-slate-700 mb-1">2. Pilih Layanan</label><select id="service-dropdown" class="form-input" required disabled><option value="">-- Pilih Platform Dulu --</option></select></div>
+                    <div><label class="block text-sm font-medium text-slate-700 mb-1">Harga per 1 Unit</label><div id="price-display" class="w-full bg-slate-100 border border-slate-300 rounded-lg px-3 py-2 text-teal-600 font-bold">Rp 0</div></div>
+                    <div><label class="block text-sm font-medium text-slate-700 mb-1">Detail Layanan</label><div id="order-details" class="w-full min-h-[80px] bg-slate-100 border border-slate-300 rounded-lg px-3 py-2 text-slate-600 text-sm">-</div></div>
+                    <div><label for="target-link" class="block text-sm font-medium text-slate-700 mb-1">3. Link Target</label><input type="url" id="target-link" placeholder="https://..." class="form-input" required></div>
+                    <div><label for="quantity-input" class="block text-sm font-medium text-slate-700 mb-1">4. Masukan Jumlah</label><input type="number" id="quantity-input" min="1" placeholder="Contoh: 1000" class="form-input" required></div>
+                    <div class="mt-8 pt-6 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+                        <div class="text-center md:text-left"><span class="text-slate-600">Total Harga:</span><div id="total-price" class="text-3xl font-bold text-teal-600">Rp 0</div></div>
+                        <div class="flex items-center gap-4">
+                            <button type="button" onclick="document.getElementById('order-form').reset(); resetFormState();" class="px-6 py-3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold rounded-lg transition-colors">RESET</button>
+                            <button type="submit" class="px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white font-bold rounded-lg transition-colors shadow-md shadow-teal-500/20">+ MASUKAN KERANJANG</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </section>
-        <!-- Tempat Tiktok -->
-        <section id="harga" class="my-16 md:my-24">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white">Daftar Layanan</h2>
-            <div class="mb-16">
-                <h3 class="text-2xl font-bold mb-6 text-blue-500">Layanan TikTok</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Promo Paket FYP 1</h4>
-                            <p class="text-xs text-slate-400 mb-3">(200k view-100k like-10k share-1k save)(Waktu Terbatas Opening web)(No Refil)(Abaikan /100 di keranjang)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 98.000<span
-                                    class="text-sm font-normal text-slate-400"></span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Promo Paket FYP 1', 98000)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Promo Paket FYP 2</h4>
-                            <p class="text-xs text-slate-400 mb-3">(100k view-50k like-5k share-500 save)(Waktu Terbatas Opening web)(No Refil)(Abaikan /100 di keranjang)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 53.000<span
-                                    class="text-sm font-normal text-slate-400"></span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Promo Paket FYP 2', 53000)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Promo Paket FYP 3</h4>
-                            <p class="text-xs text-slate-400 mb-3">(50k view-25k like-2,5k share-300 save)(Waktu Terbatas Opening web)(No Refil)(Abaikan /100 di keranjang)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 30.000<span
-                                    class="text-sm font-normal text-slate-400"></span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Promo Paket FYP 3', 30000)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Tiktok Share</h4>
-                            <p class="text-xs text-slate-400 mb-3">(MAX 100K)(Refil 7 Days)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 300 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Tiktok Share', 300)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Tiktok Share (Low Drop)</h4>
-                            <p class="text-xs text-slate-400 mb-3">(MAX 100K)(Refil 7 Days)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 500 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Tiktok Share (Non Drop)', 500)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Tiktok Share (INSTAN)</h4>
-                            <p class="text-xs text-slate-400 mb-3">(MAX 100K)(Refil 30 Days)(Non Drop)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 600 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Tiktok Share (INSTAN)', 600)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Tiktok Coment Like</h4>
-                            <p class="text-xs text-slate-400 mb-3">(MAX 100K)(Super Fast)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 600 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Tiktok Coment Like', 600)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Tiktok Rondom Coment</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Start Time 1 - 4 Hour)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 2.600 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Tiktok Rondom Coment', 2600)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Tiktok Costume Coment</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Kirim costume komen ke admin untuk di proses)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 4.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Tiktok Costume Coment', 4000)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Tiktok Costume Coment Indoneisa</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Kirim costume komen ke admin untuk di proses)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 38.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Tiktok Costume Coment Indonesia', 38000)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Tiktok Folowers Mix</h4>
-                            <p class="text-xs text-slate-400 mb-3">(MAX 200K)(7 Days Refil)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 5.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Tiktok Folowers Mix', 5000)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Tiktok Folowers Real Accounts (HQ)</h4>
-                            <p class="text-xs text-slate-400 mb-3">(MAX 300K)(10 Days Refil)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 5.500 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Tiktok Folowers Real Accounts (HQ)', 5500)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Tiktok Folowers HQ Accounts (Real)</h4>
-                            <p class="text-xs text-slate-400 mb-3">(MAX 300K)(30 Days Refil)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 7.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Tiktok Folowers HQ (Real)', 7000)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Tiktok Followers Indonesia</h4>
-                            <p class="text-xs text-slate-400 mb-3">(30 Days Refil)(500/day)(MAX 5K)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 9.900 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Tiktok Followers Indonesia', 9900)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Tiktok Like Indonesia (HQ)</h4>
-                            <p class="text-xs text-slate-400 mb-3">(15k/Days)(No Refil)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 2.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Tiktok Like Indonesia (HQ)', 2000)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Tiktok Like (SuperInstan)</h4>
-                            <p class="text-xs text-slate-400 mb-3">(7 Days Refil)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 200 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Tiktok Like (SuperInstan)', 200)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Tiktok Like (HQ & Real Profil)</h4>
-                            <p class="text-xs text-slate-400 mb-3">(30 Days Refil) (SuperInstan)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 300 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Tiktok Like (HQ & Real Profil)', 300)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Tiktok Story Like</h4>
-                            <p class="text-xs text-slate-400 mb-3"></p>
-                            <p class="text-xl font-bold text-blue-500">Rp 1.200 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Tiktok Story Like', 1200)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Tiktok Story View</h4>
-                            <p class="text-xs text-slate-400 mb-3"></p>
-                            <p class="text-xl font-bold text-blue-500">Rp 1.200 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Tiktok Story View', 1200)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Tiktok View (FAST)</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Instan Start) (Non Drop) (Unlimited)</p>
-                            <p class="text-xl font-bold text-blue-500">Rp 99 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Tiktok View (FAST)', 99)"
-                                class="flex-1 text-center bg-slate-800 text-blue-400 font-semibold py-2 rounded-r-lg hover:bg-blue-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Tempat Instagram -->
-            <div class="mb-16">
-                <h3 class="text-2xl font-bold mb-6 text-pink-500">Layanan Instagram</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Instagram Channel Member</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Global)(MAX 1M)(HQ Real)(Instan)(No Refil)</p>
-                            <p class="text-xl font-bold text-pink-500">Rp 1.800 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Instagram Channel Member', 1.800)"
-                                class="flex-1 text-center bg-slate-800 text-pink-400 font-semibold py-2 rounded-r-lg hover:bg-pink-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Instagram Channel Member (Refil)</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Global)(MAX 1M)(HQ Real)(Instan)(15 Days Refil)</p>
-                            <p class="text-xl font-bold text-pink-500">Rp 2.500 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Instagram Channel Member (Refil)', 2500)"
-                                class="flex-1 text-center bg-slate-800 text-pink-400 font-semibold py-2 rounded-r-lg hover:bg-pink-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Instagram Costume Coment</h4>
-                            <p class="text-xs text-slate-400 mb-3">(No Refil)</p>
-                            <p class="text-xl font-bold text-pink-500">Rp 10.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Instagram Costume Coment', 10000)"
-                                class="flex-1 text-center bg-slate-800 text-pink-400 font-semibold py-2 rounded-r-lg hover:bg-pink-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Instagram Costume Coment Indonesia</h4>
-                            <p class="text-xs text-slate-400 mb-3">(No Refil)</p>
-                            <p class="text-xs text-slate-400 mb-3"></p>
-                            <p class="text-xl font-bold text-pink-500">Rp 33.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Instagram Costume Coment Indonesia', 33000)"
-                                class="flex-1 text-center bg-slate-800 text-pink-400 font-semibold py-2 rounded-r-lg hover:bg-pink-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Instagram Followers Indonesia</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Real Aktif)(Refil 7 Days)(MAX 3K)</p>
-                            <p class="text-xl font-bold text-pink-500">Rp 7.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Instagram Followers Indonesia', 7000)"
-                                class="flex-1 text-center bg-slate-800 text-pink-400 font-semibold py-2 rounded-r-lg hover:bg-pink-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Instagram Followers Less Drop</h4>
-                            <p class="text-xs text-slate-400 mb-3">(100k/Days)(Refil 14 Days)</p>
-                            <p class="text-xl font-bold text-pink-500">Rp 6.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Instagram Followers Less Drop', 6000)"
-                                class="flex-1 text-center bg-slate-800 text-pink-400 font-semibold py-2 rounded-r-lg hover:bg-pink-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Instagram Followers Less Drop (SuperFast)</h4>
-                            <p class="text-xs text-slate-400 mb-3">(100k/Days)(Refil 30 Days)</p>
-                            <p class="text-xl font-bold text-pink-500">Rp 9.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Instagram Followers Less Drop (SuperFast)', 9000)"
-                                class="flex-1 text-center bg-slate-800 text-pink-400 font-semibold py-2 rounded-r-lg hover:bg-pink-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Instagram Like Indonesia (Fast)</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Max 1k)(30 DayS Refil)</p>
-                            <p class="text-xl font-bold text-pink-500">Rp 1.500 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Instagram Like Indonesia (Fast)', 1500)"
-                                class="flex-1 text-center bg-slate-800 text-pink-400 font-semibold py-2 rounded-r-lg hover:bg-pink-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Instagram Like (HQ)</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Fast)(Max 10k)(30 DayS Refil)</p>
-                            <p class="text-xl font-bold text-pink-500">Rp 800 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Instagram Like (HQ)', 800)"
-                                class="flex-1 text-center bg-slate-800 text-pink-400 font-semibold py-2 rounded-r-lg hover:bg-pink-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Instagram Like (LQ)</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Slow)(Max 10k)(30 DayS Refil)</p>
-                            <p class="text-xl font-bold text-pink-500">Rp 500 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Instagram Like (LQ)', 500)"
-                                class="flex-1 text-center bg-slate-800 text-pink-400 font-semibold py-2 rounded-r-lg hover:bg-pink-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Instaram Reels View</h4>
-                            <p class="text-xs text-slate-400 mb-3">(MAX 1M)</p>
-                            <p class="text-xl font-bold text-pink-500">Rp 80 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Instaram Reels View', 80)"
-                                class="flex-1 text-center bg-slate-800 text-pink-400 font-semibold py-2 rounded-r-lg hover:bg-pink-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Instaram Reels Like</h4>
-                            <p class="text-xs text-slate-400 mb-3">(MAX 1M)</p>
-                            <p class="text-xl font-bold text-pink-500">Rp 1.100 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Instaram Reels Like', 1100)"
-                                class="flex-1 text-center bg-slate-800 text-pink-400 font-semibold py-2 rounded-r-lg hover:bg-pink-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Instagram Share</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Speed 50k/Days)</p>
-                            <p class="text-xl font-bold text-pink-500">Rp 400 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Instagram Share', 400)"
-                                class="flex-1 text-center bg-slate-800 text-pink-400 font-semibold py-2 rounded-r-lg hover:bg-pink-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Instagram Story View Indonesia</h4>
-                            <p class="text-xs text-slate-400 mb-3"></p>
-                            <p class="text-xl font-bold text-pink-500">Rp 400 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Instagram Story View Indonesia', 400)"
-                                class="flex-1 text-center bg-slate-800 text-pink-400 font-semibold py-2 rounded-r-lg hover:bg-pink-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Instagram Story View (HQ)</h4>
-                            <p class="text-xs text-slate-400 mb-3">(All Story)</p>
-                            <p class="text-xl font-bold text-pink-500">Rp 300 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Instagram Story View (HQ)', 300)"
-                                class="flex-1 text-center bg-slate-800 text-pink-400 font-semibold py-2 rounded-r-lg hover:bg-pink-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Instagram View</h4>
-                            <p class="text-xs text-slate-400 mb-3">(All Video Link)</p>
-                            <p class="text-xl font-bold text-pink-500">Rp 99 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Instagram View', 99)"
-                                class="flex-1 text-center bg-slate-800 text-pink-400 font-semibold py-2 rounded-r-lg hover:bg-pink-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Tempat Youtube -->
-            <div class="mb-16">
-                <h3 class="text-2xl font-bold mb-6 text-red-500">Layanan Youtube</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Youtube Like</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Instan Start)(No Refil)(Max 1M)</p>
-                            <p class="text-xl font-bold text-red-500">Rp 400 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Youtube Like (No Refil)', 400)"
-                                class="flex-1 text-center bg-slate-800 text-red-400 font-semibold py-2 rounded-r-lg hover:bg-red-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Youtube Like</h4>
-                            <p class="text-xs text-slate-400 mb-3">(7 Days Refil)(Instan Start)(Max 1M)</p>
-                            <p class="text-xl font-bold text-red-500">Rp 500 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Youtube Like (7 Days Refil)', 500)"
-                                class="flex-1 text-center bg-slate-800 text-red-400 font-semibold py-2 rounded-r-lg hover:bg-red-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Youtube Like Short</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Max 1M) (No Refil)</p>
-                            <p class="text-xl font-bold text-red-500">Rp 2.500 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Youtube Like Short (No Refil)', 2500)"
-                                class="flex-1 text-center bg-slate-800 text-red-400 font-semibold py-2 rounded-r-lg hover:bg-red-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Youtube Like Short</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Max 1M)</p>
-                            <p class="text-xl font-bold text-red-500">Rp 3.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Youtube Like Short (7 Days Refil)', 3000)"
-                                class="flex-1 text-center bg-slate-800 text-red-400 font-semibold py-2 rounded-r-lg hover:bg-red-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Youtube Subscribers</h4>
-                            <p class="text-xs text-slate-400 mb-3">(MAX 100K)(High Drop Probability)(No Komplain)(No
-                                Refil)</p>
-                            <p class="text-xl font-bold text-red-500">Rp 2.500 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Youtube Subscribers No Refil', 2500)"
-                                class="flex-1 text-center bg-slate-800 text-red-400 font-semibold py-2 rounded-r-lg hover:bg-red-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Youtube Subscribers</h4>
-                            <p class="text-xs text-slate-400 mb-3">(MAX 10K)(7 Days Refil)(100 - 200/days)</p>
-                            <p class="text-xl font-bold text-red-500">Rp 6.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Youtube Subscribers 7 Days Refil', 6000)"
-                                class="flex-1 text-center bg-slate-800 text-red-400 font-semibold py-2 rounded-r-lg hover:bg-red-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Youtube View</h4>
-                            <p class="text-xs text-slate-400 mb-3">(99,9% Non Drop)(Direct+overdelivery)(max 25k/dats)
-                            </p>
-                            <p class="text-xl font-bold text-red-500">Rp 3.200 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Youtube View', 3200)"
-                                class="flex-1 text-center bg-slate-800 text-red-400 font-semibold py-2 rounded-r-lg hover:bg-red-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Youtube View Jam Tayang (15 min video)</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Speed 100/Hours)(15 days refil)</p>
-                            <p class="text-xl font-bold text-red-500">Rp 37.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Youtube View Jam Tayang (15 min)', 37000)"
-                                class="flex-1 text-center bg-slate-800 text-red-400 font-semibold py-2 rounded-r-lg hover:bg-red-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Youtube View Jam Tayang (30 min video)</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Speed 100/Hours)(15 days refil)</p>
-                            <p class="text-xl font-bold text-red-500">Rp 48.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Youtube View Jam Tayang (30 min)', 48000)"
-                                class="flex-1 text-center bg-slate-800 text-red-400 font-semibold py-2 rounded-r-lg hover:bg-red-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Youtube View Jam Tayang (60 min video)</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Speed 100/Hours)(15 days refil)</p>
-                            <p class="text-xl font-bold text-red-500">Rp 130.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Youtube View Jam Tayang (60 min)', 130000)"
-                                class="flex-1 text-center bg-slate-800 text-red-400 font-semibold py-2 rounded-r-lg hover:bg-red-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Tempat Fesnuk -->
-            <div class="mb-16">
-                <h3 class="text-2xl font-bold mb-6 text-indigo-500">Layanan Facebook</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Facebook Followers Profile</h4>
-                            <p class="text-xs text-slate-400 mb-3">(No Refil)(100k/Days)</p>
-                            <p class="text-xl font-bold text-indigo-500">Rp 2.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Facebook Followers Profile', 2000)"
-                                class="flex-1 text-center bg-slate-800 text-indigo-400 font-semibold py-2 rounded-r-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Facebook Followers Profile</h4>
-                            <p class="text-xs text-slate-400 mb-3">(100k/Days)(7 Days Refil)</p>
-                            <p class="text-xl font-bold text-indigo-500">Rp 2.600 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Facebook Followers Profile (Refil)', 2600)"
-                                class="flex-1 text-center bg-slate-800 text-indigo-400 font-semibold py-2 rounded-r-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Facebook Group Member</h4>
-                            <p class="text-xs text-slate-400 mb-3">(MAX 10K)(NO REFIL)</p>
-                            <p class="text-xl font-bold text-indigo-500">Rp 2.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Facebook Group Member', 2000)"
-                                class="flex-1 text-center bg-slate-800 text-indigo-400 font-semibold py-2 rounded-r-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Facebook Post Like</h4>
-                            <p class="text-xs text-slate-400 mb-3">(NO REFIL)(Real Profil)</p>
-                            <p class="text-xl font-bold text-indigo-500">Rp 2.000 <span
-                                    class="text-sm font-normal text-slate-400">/1000</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Facebook Post Like', 2000)"
-                                class="flex-1 text-center bg-slate-800 text-indigo-400 font-semibold py-2 rounded-r-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Facebook Post Like</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Real Profil)(7 days refil)</p>
-                            <p class="text-xl font-bold text-indigo-500">Rp 2.400 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Facebook Post Like (Refil)', 2400)"
-                                class="flex-1 text-center bg-slate-800 text-indigo-400 font-semibold py-2 rounded-r-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-semibold text-white">Facebook Post Share</h4>
-                            <p class="text-xs text-slate-400 mb-3">(Real Profil)(7 days refil)</p>
-                            <p class="text-xs text-slate-400 mb-3"></p>
-                            <p class="text-xl font-bold text-indigo-500">Rp 1.000 <span
-                                    class="text-sm font-normal text-slate-400">/100</span></p>
-                        </div>
-                        <div class="flex items-center mt-4"><input type="number" value="1" min="1"
-                                class="w-16 bg-slate-800 border border-slate-700 rounded-l-lg text-center text-white"><button
-                                onclick="addToCart(this, 'Facebook Post Share', 1000)"
-                                class="flex-1 text-center bg-slate-800 text-indigo-400 font-semibold py-2 rounded-r-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm border-l border-slate-700">Tambah</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Tempat testimoni -->
+<!-- Tempat Testimoni -->
         <section id="testimoni" class="my-16 md:my-24">
-            <h2 class="text-2xl font-bold text-center mb-12 text-white">Apa Kata Pelanggan Kami?</h2>
+            <h2 class="text-2xl font-bold text-center mb-12 text-slate-900">Apa Kata Pelanggan Kami?</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-slate-900 p-6 rounded-lg border border-slate-800">
-                    <div class="flex items-center mb-2"><span class="text-yellow-400">★★★★★</span></div>
-                    <p class="text-slate-400 text-sm italic mb-4">"Gila, followers naiknya cepet banget dan real! Akun
-                        jadi lebih rame dan terpercaya. Recommended banget pokoknya!"</p>
-                    <p class="text-right font-semibold text-white">- Anita S.</p>
-                </div>
-                <div class="bg-slate-900 p-6 rounded-lg border border-slate-800">
-                    <div class="flex items-center mb-2"><span class="text-yellow-400">★★★★★</span></div>
-                    <p class="text-slate-400 text-sm italic mb-4">"Awalnya ragu, tapi setelah coba layanan jam tayang,
-                        akhirnya channel Youtube saya bisa monetisasi. Terima kasih Soeltan Medsos!"</p>
-                    <p class="text-right font-semibold text-white">- Quir***** ytc</p>
-                </div>
-                <div class="bg-slate-900 p-6 rounded-lg border border-slate-800">
-                    <div class="flex items-center mb-2"><span class="text-yellow-400">★★★★</span><span
-                            class="text-slate-600">★</span></div>
-                    <p class="text-slate-400 text-sm italic mb-4">"Prosesnya cepat dan harganya paling murah di antara
-                        yang lain. Meskipun ada sedikit drop, tapi langsung di-refill. Mantap!"</p>
-                    <p class="text-right font-semibold text-white">- R***a</p>
-                </div>
+                <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm"><div class="flex items-center mb-2"><span class="text-yellow-400">★★★★★</span></div><p class="text-slate-600 text-sm italic mb-4">"Gila, followers naiknya cepet banget dan real! Recommended!"</p><p class="text-right font-semibold text-slate-800">- Anita S.</p></div>
+                <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm"><div class="flex items-center mb-2"><span class="text-yellow-400">★★★★★</span></div><p class="text-slate-600 text-sm italic mb-4">"Akhirnya channel Youtube saya bisa monetisasi. Terima kasih Soeltan Medsos!"</p><p class="text-right font-semibold text-slate-800">- Quir***** ytc</p></div>
+                <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm"><div class="flex items-center mb-2"><span class="text-yellow-400">★★★★</span><span class="text-slate-300">★</span></div><p class="text-slate-600 text-sm italic mb-4">"Prosesnya cepat dan harga murah. Ada drop sedikit, tapi langsung di-refill. Mantap!"</p><p class="text-right font-semibold text-slate-800">- R***a</p></div>
             </div>
         </section>
-        <!-- Tempat Faq -->
+<!-- Tempat FAQ -->
         <section id="faq" class="max-w-3xl mx-auto my-16 md:my-24">
-            <h2 class="text-2xl font-bold text-center mb-8 text-white">Pertanyaan Umum</h2>
+            <h2 class="text-2xl font-bold text-center mb-8 text-slate-900">Pertanyaan Umum</h2>
             <div class="space-y-4">
-                <details class="bg-slate-900 p-4 rounded-lg border border-slate-800">
-                    <summary class="font-semibold text-white list-none flex justify-between items-center">Apa itu
-                        "Refil"?</summary>
-                    <p class="text-slate-400 mt-3 border-t border-slate-700 pt-3 text-sm">Refil adalah garansi isi
-                        ulang. Jika jumlah followers/likes yang Anda beli berkurang dalam periode garansi (misal: 30
-                        hari), kami akan mengisinya kembali secara gratis.</p>
-                </details>
-                <details class="bg-slate-900 p-4 rounded-lg border border-slate-800">
-                    <summary class="font-semibold text-white list-none flex justify-between items-center">Apakah layanan
-                        ini aman?</summary>
-                    <p class="text-slate-400 mt-3 border-t border-slate-700 pt-3 text-sm">Ya, kami menggunakan metode
-                        promosi yang aman. Kami tidak memerlukan password atau akses login ke akun Anda.</p>
-                </details>
-                <details class="bg-slate-900 p-4 rounded-lg border border-slate-800">
-                    <summary class="font-semibold text-white list-none flex justify-between items-center">Bagaimana cara
-                        pembayarannya?</summary>
-                    <p class="text-slate-400 mt-3 border-t border-slate-700 pt-3 text-sm">Anda dapat melakukan
-                        pembayaran melalui QRIS atau transfer bank (Dana, BCA, BRI) yang tersedia di formulir pemesanan.
-                    </p>
-                </details>
-                <details class="bg-slate-900 p-4 rounded-lg border border-slate-800">
-                    <summary class="font-semibold text-white list-none flex justify-between items-center">Berapa lama
-                        proses pengerjaannya?</summary>
-                    <p class="text-slate-400 mt-3 border-t border-slate-700 pt-3 text-sm">Waktu proses bervariasi.
-                        Layanan "Instan" biasanya masuk dalam hitungan menit, namun ada juga yang memerlukan beberapa
-                        jam. Anda bisa menanyakan estimasi pada admin saat memesan.</p>
-                </details>
-                <details class="bg-slate-900 p-4 rounded-lg border border-slate-800">
-                    <summary class="font-semibold text-white list-none flex justify-between items-center">Apakah bisa
-                        untuk akun yang di-private?</summary>
-                    <p class="text-slate-400 mt-3 border-t border-slate-700 pt-3 text-sm">Tidak bisa. Mohon pastikan
-                        akun Anda diatur ke 'Publik' selama proses pengerjaan. Setelah selesai, Anda bebas mengaturnya
-                        kembali ke 'Private'.</p>
-                </details>
+                <details class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm"><summary class="font-semibold text-slate-900 list-none cursor-pointer">Apa itu "Refil"?</summary><p class="text-slate-600 mt-3 border-t border-slate-200 pt-3 text-sm">Refil adalah garansi isi ulang. Jika jumlah pesanan berkurang dalam periode garansi, kami akan mengisinya kembali gratis.</p></details>
+                <details class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm"><summary class="font-semibold text-slate-900 list-none cursor-pointer">Apakah layanan ini aman?</summary><p class="text-slate-600 mt-3 border-t border-slate-200 pt-3 text-sm">Ya, 100% aman. Kami tidak memerlukan password atau akses login ke akun Anda.</p></details>
+                <details class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm"><summary class="font-semibold text-slate-900 list-none cursor-pointer">Bagaimana cara pembayarannya?</summary><p class="text-slate-600 mt-3 border-t border-slate-200 pt-3 text-sm">Anda dapat membayar melalui QRIS atau transfer bank yang tersedia di formulir pembayaran.</p></details>
+                <details class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm"><summary class="font-semibold text-slate-900 list-none cursor-pointer">Berapa lama proses pengerjaannya?</summary><p class="text-slate-600 mt-3 border-t border-slate-200 pt-3 text-sm">Waktu proses bervariasi. Layanan "Instan" biasanya masuk dalam hitungan menit, namun ada juga yang memerlukan beberapa jam. Anda bisa menanyakan estimasi pada admin saat memesan.</p></details>
+                <details class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm"><summary class="font-semibold text-slate-900 list-none cursor-pointer">Apakah bisa untuk akun yang di-private?</summary><p class="text-slate-600 mt-3 border-t border-slate-200 pt-3 text-sm">Tidak bisa. Mohon pastikan akun Anda diatur ke 'Publik' selama proses pengerjaan. Setelah selesai, Anda bebas mengaturnya kembali ke 'Private'.</p></details>
             </div>
         </section>
-        <!-- Tempat question langsung ke wa -->
-        <section class="text-center bg-blue-900/20 p-8 sm:p-10 rounded-xl border border-blue-800">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Ada Pertanyaan Lain?</h2>
-            <p class="text-slate-400 mb-8 max-w-xl mx-auto">Jika Anda butuh bantuan atau ingin bertanya langsung, jangan
-                ragu untuk menghubungi admin kami.</p>
-            <a href="https://wa.me/6281252835382?text=Halo%20Soeltan%20Medsos,%20saya%20ingin%20bertanya%20tentang%20layanan."
-                target="_blank"
-                class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20">Hubungi
-                Admin di WhatsApp</a>
+<!-- Langsung ke wa muu -->
+        <section class="text-center bg-teal-500/10 p-8 sm:p-10 rounded-xl border border-teal-500/20">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Ada Pertanyaan Lain?</h2>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto">Jika Anda butuh bantuan atau ingin bertanya langsung, jangan ragu untuk menghubungi admin kami.</p>
+            <a href="https://wa.me/6281252835382?text=Halo%20Soeltan%20Medsos,%20saya%20ingin%20bertanya%20tentang%20layanan." target="_blank" class="inline-block bg-teal-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-teal-600 transition-colors shadow-lg shadow-teal-500/20">Hubungi Admin di WhatsApp</a>
         </section>
-        <!-- Tempat saya ngiklanin wkwkw -->
-        <section id="jasa-website"
-            class="text-center bg-gradient-to-r from-blue-900/30 to-slate-900 p-8 sm:p-10 rounded-xl border border-blue-800 my-16">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Butuh Website Profesional Seperti Ini?</h2>
-            <p class="text-slate-400 mb-8 max-w-2xl mx-auto">Wujudkan ide Anda menjadi website profesional untuk toko
-                online, portofolio, atau profil perusahaan. Harga terjangkau dengan pengerjaan cepat dan responsif.</p>
-            <a href="https://wa.me/6285765907580?text=Halo,%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20Anda%20dan%20ingin%20berkonsultasi%20lebih%20lanjut."
-                target="_blank"
-                class="inline-block bg-green-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-green-700 transition-colors shadow-lg shadow-green-600/20">
-                💬 Konsultasi Gratis via WhatsApp
-            </a>
+<!-- Langsung ke wa ku -->
+        <section id="jasa-website" class="text-center bg-white p-8 sm:p-10 rounded-xl border border-slate-200 shadow-lg my-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Butuh Website Profesional Seperti Ini?</h2>
+            <p class="text-slate-600 mb-8 max-w-2xl mx-auto">Wujudkan ide Anda menjadi website profesional untuk toko online, portofolio, atau profil perusahaan. Harga terjangkau dengan pengerjaan cepat dan responsif.</p>
+            <a href="https://wa.me/6285765907580?text=Halo,%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website." target="_blank" class="inline-block bg-green-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-green-700 transition-colors shadow-lg shadow-green-600/20">💬 Konsultasi Gratis via WhatsApp</a>
         </section>
 
-    </div>
-    <!-- Info media social -->
-    <footer class="border-t border-slate-800 mt-16 md:mt-20 py-8">
+    </main>
+<!-- Tempat media sosial -->
+    <footer class="border-t border-slate-200 py-8 bg-white">
         <div class="container mx-auto text-center text-slate-500 text-sm">
             <p class="mb-4">Temukan Kami di Sosial Media:</p>
             <div class="flex justify-center items-center space-x-6 mb-6">
-                <a href="https://www.instagram.com/soeltanmedsosdgm?igsh=MWQzZHozcW5pdTRnMA==" target="_blank"
-                    class="text-slate-400 hover:text-pink-500 transition-colors" title="Instagram">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.2,5.2 0 0,1 16.2,21.4H7.8C4.6,21.4 2,18.8 2,15.6V7.8A5.2,5.2 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
-                    </svg>
-                </a>
-                <a href="https://tiktok.com/@didikfjr" target="_blank"
-                    class="text-slate-400 hover:text-white transition-colors" title="TikTok">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M16.6,5.33H13.88V15.7A2.23,2.23,0,1,1,11.65,13.5V11.12A4.63,4.63,0,1,0,16.27,15.7V9.21A5.33,5.33,0,0,0,21.6,3.92V7.13A2.13,2.13,0,0,1,19.47,9.21H16.6Z" />
-                    </svg>
-                </a>
-                <a href="https://youtube.com/@soeltanmedsos?si=tRiLEvdzrXKBVAuC" target="_blank"
-                    class="text-slate-400 hover:text-red-500 transition-colors" title="YouTube">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23-1.54.91-1.77 1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z" />
-                    </svg>
-                </a>
+                <a href="https://www.instagram.com/soeltanmedsosdgm?igsh=MWQzZHozcW5pdTRnMA==" target="_blank" class="text-slate-400 hover:text-pink-500 transition-colors" title="Instagram"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.2,5.2 0 0,1 16.2,21.4H7.8C4.6,21.4 2,18.8 2,15.6V7.8A5.2,5.2 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg></a>
+                <a href="https://tiktok.com/@didikfjr" target="_blank" class="text-slate-400 hover:text-slate-800 transition-colors" title="TikTok"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M16.6,5.33H13.88V15.7A2.23,2.23,0,1,1,11.65,13.5V11.12A4.63,4.63,0,1,0,16.27,15.7V9.21A5.33,5.33,0,0,0,21.6,3.92V7.13A2.13,2.13,0,0,1,19.47,9.21H16.6Z" /></svg></a>
+                <a href="https://youtube.com/@soeltanmedsos?si=tRiLEvdzrXKBVAuC" target="_blank" class="text-slate-400 hover:text-red-500 transition-colors" title="YouTube"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23-1.54.91-1.77 1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z" /></svg></a>
             </div>
-            <!-- Tempat Aplikasi -->
-            <div class="mt-4">
-                <a href="Soeltan_Medsos.apk"
-                    class="inline-block bg-slate-800 text-slate-300 font-semibold py-2 px-4 rounded-lg hover:bg-slate-700 transition-colors">
-                    Download Aplikasi
-                </a>
-            </div>
+            <div class="mt-4"><a href="Soeltan_Medsos.apk" class="inline-block bg-slate-200 text-slate-700 font-semibold py-2 px-4 rounded-lg hover:bg-slate-300 transition-colors">Download Aplikasi</a></div>
             <p class="mt-4">© 2025 Soeltan Medsos. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <div id="modal-container"
-        class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden p-4">
-        <div id="modal-content"
-            class="bg-slate-900 p-6 rounded-lg w-full max-w-md max-h-[90vh] flex flex-col border border-slate-700">
-        </div>
+    <div id="modal-container" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden p-4">
+        <div id="modal-content" class="bg-white p-6 rounded-lg w-full max-w-md max-h-[90vh] flex flex-col border border-slate-200 shadow-2xl"></div>
     </div>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
