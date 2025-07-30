@@ -8,7 +8,7 @@
 // ===============================================
 // BAGIAN 1: KONFIGURASI UTAMA
 // ===============================================
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyHBNIeOSUbNtas1cn-p6hH-I-EmKpubnySCrK5bdVZfpIAGV7PKHIIpjwTztQNHKnmjw/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzggFNudw-oK6YE2DT5sWMADXCSDY7fhGlKOWUBHikNVRXo2kilBoaIpwQ4mn8eJGD2mg/exec';
 const API_KEY = 'MasDidik123';
 
 // ===============================================
@@ -84,6 +84,7 @@ const allServices = [
     { id: 47, platform: 'Facebook', name: 'Facebook Post Like', price: 20, description: '(NO REFIL)(Real Profil)' },
     { id: 48, platform: 'Facebook', name: 'Facebook Post Like (Refil 7 days)', price: 24, description: '(Real Profil)' },
     { id: 49, platform: 'Facebook', name: 'Facebook Post Share', price: 10, description: '(Real Profil)(7 days refil)' },
+    { id: 50, platform: 'Promo', name: 'Coming Soon', price: 0, description: 'Promo Spesial Hari Kemerdekaan Segera Hadir' },
 ];
 
 // ===============================================
