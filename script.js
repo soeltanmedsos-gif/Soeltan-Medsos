@@ -87,6 +87,10 @@ const allServices = [
     { id: 50, platform: 'Promo', name: 'Promo Tiktok FYP V1', price: 98000, description: 'Promo Kemerdekaan V1. Promo terbatas Selama Bulan Agustus (200.000 View)(100.000 Like)(10.000 Share)(1.000 Save/Favorit)' },
     { id: 51, platform: 'Promo', name: 'Promo Tiktok FYP V2', price: 50000, description: 'Promo Kemerdekaan V2. Promo terbatas Selama Bulan Agustus (100.000 View)(50.000 Like)(5.000 Share)(500 Save/Favorit)' },
     { id: 52, platform: 'Promo', name: 'Promo Tiktok FYP V3', price: 30000, description: 'Promo Kemerdekaan V3. Promo terbatas Selama Bulan Agustus (50.000 View)(25.000 Like)(3.000 Share)(3.000 Save/Favorit)' },
+    { id: 53, platform: 'Promo', name: 'Promo Instagram Followers', price: 15, description: 'Promo Kemerdekaan (No refil)(Less Drop)(No Komplain)(LQ)' },
+    { id: 54, platform: 'Promo', name: 'Promo Instagram Like', price: 1, description: 'Promo Kemerdekaan (No refil)(Mix Quality)(LQ)' },
+    { id: 55, platform: 'Promo', name: 'Promo Instagram Share', price: 1, description: 'Promo Kemerdekaan (No refil)(Mix Quality)(LQ)' },
+    { id: 56, platform: 'Promo', name: 'Promo Youtube Subscriber', price: 10, description: 'Promo Kemerdekaan (No refil)(Mix Quality)(LQ)(No Partial No Refun)(High Drop Probability)' },
 ];
 
 // ===============================================
