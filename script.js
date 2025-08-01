@@ -91,6 +91,13 @@ const allServices = [
     { id: 54, platform: 'Promo', name: 'Promo Instagram Like', price: 1, description: 'Promo Kemerdekaan (No refil)(Mix Quality)(LQ)' },
     { id: 55, platform: 'Promo', name: 'Promo Instagram Share', price: 1, description: 'Promo Kemerdekaan (No refil)(Mix Quality)(LQ)' },
     { id: 56, platform: 'Promo', name: 'Promo Youtube Subscriber', price: 10, description: 'Promo Kemerdekaan (No refil)(Mix Quality)(LQ)(No Partial No Refun)(High Drop Probability)' },
+    { id: 57, platform: 'Whatsapp', name: 'Whatsapp Channel Post Reaction [ 👍 ]', price: 20, description: '(Max 1K) (Instant)' },
+    { id: 58, platform: 'Whatsapp', name: 'Whatsapp Channel Post Reaction [ ❤️ ]', price: 20, description: '(Max 1K) (Instant)' },
+    { id: 59, platform: 'Whatsapp', name: 'Whatsapp Channel Post Reaction [ 😂 ]', price: 20, description: '(Max 1K) (Instant)' }, 
+    { id: 60, platform: 'Whatsapp', name: 'Whatsapp Channel Post Reaction [ Mix 👍❤️😂😲😥🙏 ]', price: 20, description: '(Max 50K) (Instant)' },
+    { id: 61, platform: 'Whatsapp', name: 'Whatsapp Channel Member', price: 36, description: '(Global)(Max 50K)(HQ Profiles)(500/days)' },
+
+
 ];
 
 // ===============================================
