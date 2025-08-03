@@ -96,8 +96,13 @@ const allServices = [
     { id: 59, platform: 'Whatsapp', name: 'Whatsapp Channel Post Reaction [ 😂 ]', price: 20, description: '(Max 1K) (Instant)' }, 
     { id: 60, platform: 'Whatsapp', name: 'Whatsapp Channel Post Reaction [ Mix 👍❤️😂😲😥🙏 ]', price: 20, description: '(Max 50K) (Instant)' },
     { id: 61, platform: 'Whatsapp', name: 'Whatsapp Channel Member', price: 36, description: '(Global)(Max 50K)(HQ Profiles)(500/days)' },
-
-
+    { id: 62, platform: 'Telegram', name: 'Telegram Channel Group/Member', price: 21, description: '(Global)(Max 100K)(7 Days Refil)(25k/days)' },
+    { id: 63, platform: 'Telegram', name: 'Telegram Post View', price: 21, description: '(Superfast)(Max 50m)(No Refil)' },
+    { id: 64, platform: 'Telegram', name: 'Telegram Positive  Reaction (S1)(Mix👍 ❤️ 🔥 🎉🤩 😁 + Views)', price: 21, description: '(Max 200K)(10K/days)(No Refil)' },
+    { id: 65, platform: 'Telegram', name: 'Telegram Story View', price: 21, description: '(HQ Services)(Max: 500K)(50K/days)(No Refil)' },
+    { id: 66, platform: 'Google Maps', name: 'Rating Only', price: 6000, description: '(HQ Services)(Max: 500K)(50K/days)(No Refil)' },
+    { id: 67, platform: 'Google Maps', name: 'Rating dan Ulasan', price: 8500, description: '(HQ Services)(Max: 500K)(50K/days)(No Refil)' },
+    { id: 68, platform: 'Google Maps', name: 'Rating dan Foto', price: 19000, description: '(HQ Services)(Max: 500K)(50K/days)(No Refil)' },
 ];
 
 // ===============================================
