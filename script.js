@@ -56,7 +56,7 @@ const allServices = [
     { id: 19, platform: 'Instagram', name: 'Instagram Channel Member (Refil)', price: 25, description: '(Global)(MAX 1M)(HQ Real)(Instan)(15 Days Refil)' },
     { id: 20, platform: 'Instagram', name: 'Instagram Costume Coment', price: 100, description: '(No Refil)(Slow)' },
     { id: 21, platform: 'Instagram', name: 'Instagram Costume Coment Indonesia', price: 330, description: '(No Refil)(HQ(Slow)' },
-    { id: 22, platform: 'Instagram', name: 'Instagram Followers Indonesia', price: 70, description: '(Real Aktif)(Refil 7 Days)(MAX 3K)' },
+    { id: 22, platform: 'Instagram', name: 'Instagram Followers Indonesia', price: 100, description: '(Real Aktif)(Refil 7 Days)(MAX 3K)' },
     { id: 23, platform: 'Instagram', name: 'Instagram Followers Less Drop', price: 60, description: '(100k/Days)(Refil 14 Days)' },
     { id: 24, platform: 'Instagram', name: 'Instagram Followers Less Drop (SuperFast)', price: 90, description: '(100k/Days)(Refil 30 Days)' },
     { id: 25, platform: 'Instagram', name: 'Instagram Like Indonesia (Fast)', price: 15, description: '(Max 1k)(30 DayS Refil)' },
