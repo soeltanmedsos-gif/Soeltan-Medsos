@@ -461,324 +461,325 @@
         "price": 19000,
         "description": "(HQ Services)(Max: 500K)(50K/days)(No Refil)"
     },
-    {
-        "id": 67,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "YouTube",
-        "name": "YOUTUBE PREMIUM 1 BULAN",
-        "price": 6000,
-        "description": "garansi 25 hari"
-    },
-    {
-        "id": 68,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Prime Video",
-        "name": "PRIME VIDEO PRIVATE 1 BULAN",
-        "price": 14000,
-        "description": "garansi 10 hari"
-    },
-    {
-        "id": 69,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Youku",
-        "name": "YOUKU SHARING 1 BULAN",
-        "price": 9000,
-        "description": "garansi 25 hari"
-    },
-    {
-        "id": 70,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Bstation",
-        "name": "BSTATION SHARING 1 BULAN",
-        "price": 9000,
-        "description": "garansi 25 hari"
-    },
-    {
-        "id": 71,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Netflix",
-        "name": "NETFLIX SINGLE SCREEN 1 BULAN",
-        "price": 40000,
-        "description": "garansi 25 hari"
-    },
-    {
-        "id": 72,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Viu",
-        "name": "VIU PREMIUM PRIVATE 12 BULAN",
-        "price": 6000,
-        "description": "garansi 6 bulan"
-    },
-    {
-        "id": 73,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Drakor ID",
-        "name": "DRAKOR ID SHARING 12 BULAN",
-        "price": 15000,
-        "description": "garansi 6 bulan"
-    },
-    {
-        "id": 74,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "iQIYI",
-        "name": "IQIYI SHARING 1 BULAN",
-        "price": 10000,
-        "description": "garansi 25 hari"
-    },
-    {
-        "id": 75,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Gagaoolala",
-        "name": "GAGAOOLALA SHARING 1 BULAN",
-        "price": 9000,
-        "description": "garansi 25 hari"
-    },
-    {
-        "id": 76,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "ReelShort",
-        "name": "REELSHORT SHARING 1 BULAN",
-        "price": 18000,
-        "description": "garansi 25 hari S&K Berlaku"
-    },
-    {
-        "id": 77,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Mubi",
-        "name": "MUBI PREMIUM PRIVATE 1 BULAN",
-        "price": 9000,
-        "description": "garansi 10 hari"
-    },
-    {
-        "id": 78,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Viki",
-        "name": "VIKI PASS STANDAR PRIVATE 1 BULAN",
-        "price": 19000,
-        "description": "garansi 10 hari"
-    },
-    {
-        "id": 79,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Viki",
-        "name": "VIKI PASS STANDARD PRIVATE 7 HARI",
-        "price": 19000,
-        "description": "garansi 10 hari"
-    },
-    {
-        "id": 80,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Alight Motion",
-        "name": "ALIGHT MOTION PRIVATE ANDROID 12 BULAN",
-        "price": 6000,
-        "description": "garansi 3 bulan"
-    },
-    {
-        "id": 81,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "PhotoRoom",
-        "name": "PHOTOROOM PRO PRIVATE 7 HARI",
-        "price": 5000,
-        "description": "Non Garansi"
-    },
-    {
-        "id": 82,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Inshot",
-        "name": "INSHOT SHARING LIFETIME",
-        "price": 16000,
-        "description": "garansi 2 bulan"
-    },
-    {
-        "id": 83,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Canva",
-        "name": "CANVA EDUCATION LIFETIME",
-        "price": 20000,
-        "description": "GARANSI 3 BULAN"
-    },
-    {
-        "id": 84,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Picsart",
-        "name": "PICSART PRO PRIVATE 1 BULAN",
-        "price": 9000,
-        "description": "GARANSI 1 BULAN"
-    },
-    {
-        "id": 85,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "OldRoll",
-        "name": "OLDROLL SHARING LIFETIME ANDROID",
-        "price": 17000,
-        "description": "GARANSI 6 BULAN"
-    },
-    {
-        "id": 86,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "VSCO",
-        "name": "VSCO SHARING 12 BULAN ANDROID",
-        "price": 19000,
-        "description": "GARANSI 6 BULAN"
-    },
-    {
-        "id": 87,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Canva",
-        "name": "CANVA PRO HEAD 1 BULAN INVITE MAX 100",
-        "price": 50000,
-        "description": "GARANSI 1 BULAN"
-    },
-    {
-        "id": 88,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Canva",
-        "name": "CANVA PRO MEMBER 1 BULAN",
-        "price": 20000,
-        "description": "GARANSI 7 HARI"
-    },
-    {
-        "id": 89,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Capcut",
-        "name": "CAPCUT PRO SHARING 30 HARI",
-        "price": 25000,
-        "description": "GARANSI BF 7 HARI"
-    },
-    {
-        "id": 90,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Picsart",
-        "name": "PICART SHARING 1 BULAN",
-        "price": 5000,
-        "description": "GARANSI 7 HARI"
-    },
-    {
-        "id": 91,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Picsart",
-        "name": "PICART PRIVAT 1 BULAN",
-        "price": 7000,
-        "description": "GARANSI 7 HARI"
-    },
-    {
-        "id": 92,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Wink",
-        "name": "WINK 7 HARI SHARING",
-        "price": 12000,
-        "description": "GARANSI 7 HARI"
-    },
-    {
-        "id": 93,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Wink",
-        "name": "WINK 1 BULAN SHARING",
-        "price": 20000,
-        "description": "GARANSI 25 HARI"
-    },
-    {
-        "id": 94,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Wink",
-        "name": "WINK 1 BULAN PRIVAT",
-        "price": 25000,
-        "description": "GARANSI 25 HARI"
-    },
-    {
-        "id": 95,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Ibis Paint",
-        "name": "IBIS PAINT ANDROID 1 TAHUN",
-        "price": 24000,
-        "description": "GARANSI 6 BULAN"
-    },
-    {
-        "id": 96,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Meitu",
-        "name": "MEITU 1 BULAN ANDROID",
-        "price": 24000,
-        "description": "GARANSI 7 HARI"
-    },
-    {
-        "id": 97,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "VSCO",
-        "name": "VSCO ANDROID 1 TAHUN",
-        "price": 20000,
-        "description": "GARANSI 6 BULAN"
-    },
-    {
-        "id": 98,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Lightroom",
-        "name": "LIGHTROOM 1 TAHUN",
-        "price": 18000,
-        "description": "GARANSI 6 BULAN"
-    },
-    {
-        "id": 99,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "Remini",
-        "name": "REMINI 1 TAHUN",
-        "price": 20000,
-        "description": "GARANSI 6 BULAN"
-    },
-    {
-        "id": 100,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "VPN",
-        "name": "AVIRA VPN PRIVATE 3 BULAN",
-        "price": 10000,
-        "description": "GARANSI 3 BULAN"
-    },
-    {
-        "id": 101,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "VPN",
-        "name": "CODE REDEEM VPN SURFSHARK 90 HARI",
-        "price": 15000,
-        "description": "non garansi"
-    },
-    {
-        "id": 102,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "AI",
-        "name": "AI YOU SHARING 1 BULAN",
-        "price": 20000,
-        "description": "GARANSI 1 BULAN"
-    },
-    {
-        "id": 103,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "AI",
-        "name": "SCITE AI PREMIUM PRIVATE 7 DAY",
-        "price": 5000,
-        "description": "NON GARANSI"
-    },
-    {
-        "id": 104,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "ChatGPT",
-        "name": "CHATGPT PRIVATE 90 HARI AKUN BUYER",
-        "price": 200000,
-        "description": "GARANSI BF"
-    },
-    {
-        "id": 105,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "ChatGPT",
-        "name": "CHATGPT SHARING 90 HARI",
-        "price": 140000,
-        "description": "GARANSI BF"
-    },
-    {
-        "id": 106,
-        "platform": "Aplikasi Premium",
-        "sub_platform": "ChatGPT",
-        "name": "CHATGPT 1 SHARING 1 BULAN",
-        "price": 25000,
-        "description": "GARANSI 7 HARI"
-    }
+
+  {
+    "id": 67,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "AI",
+    "name": "AI YOU SHARING 1 BULAN",
+    "price": 20000,
+    "description": "GARANSI 1 BULAN"
+  },
+  {
+    "id": 68,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Alight Motion",
+    "name": "ALIGHT MOTION PRIVATE ANDROID 12 BULAN",
+    "price": 6000,
+    "description": "garansi 3 bulan"
+  },
+  {
+    "id": 69,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "VPN",
+    "name": "AVIRA VPN PRIVATE 3 BULAN",
+    "price": 10000,
+    "description": "GARANSI 3 BULAN"
+  },
+  {
+    "id": 70,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Bstation",
+    "name": "BSTATION SHARING 1 BULAN",
+    "price": 9000,
+    "description": "garansi 25 hari"
+  },
+  {
+    "id": 71,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Canva",
+    "name": "CANVA EDUCATION LIFETIME",
+    "price": 20000,
+    "description": "GARANSI 3 BULAN"
+  },
+  {
+    "id": 72,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Canva",
+    "name": "CANVA PRO HEAD 1 BULAN INVITE MAX 100",
+    "price": 50000,
+    "description": "GARANSI 1 BULAN"
+  },
+  {
+    "id": 73,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Canva",
+    "name": "CANVA PRO MEMBER 1 BULAN",
+    "price": 20000,
+    "description": "GARANSI 7 HARI"
+  },
+  {
+    "id": 74,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Capcut",
+    "name": "CAPCUT PRO SHARING 30 HARI",
+    "price": 25000,
+    "description": "GARANSI BF 7 HARI"
+  },
+  {
+    "id": 75,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "ChatGPT",
+    "name": "CHATGPT 1 SHARING 1 BULAN",
+    "price": 25000,
+    "description": "GARANSI 7 HARI"
+  },
+  {
+    "id": 76,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "ChatGPT",
+    "name": "CHATGPT PRIVATE 90 HARI AKUN BUYER",
+    "price": 200000,
+    "description": "GARANSI BF"
+  },
+  {
+    "id": 77,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "ChatGPT",
+    "name": "CHATGPT SHARING 90 HARI",
+    "price": 140000,
+    "description": "GARANSI BF"
+  },
+  {
+    "id": 78,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "VPN",
+    "name": "CODE REDEEM VPN SURFSHARK 90 HARI",
+    "price": 15000,
+    "description": "non garansi"
+  },
+  {
+    "id": 79,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Drakor ID",
+    "name": "DRAKOR ID SHARING 12 BULAN",
+    "price": 15000,
+    "description": "garansi 6 bulan"
+  },
+  {
+    "id": 80,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Gagaoolala",
+    "name": "GAGAOOLALA SHARING 1 BULAN",
+    "price": 9000,
+    "description": "garansi 25 hari"
+  },
+  {
+    "id": 81,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Ibis Paint",
+    "name": "IBIS PAINT ANDROID 1 TAHUN",
+    "price": 24000,
+    "description": "GARANSI 6 BULAN"
+  },
+  {
+    "id": 82,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Inshot",
+    "name": "INSHOT SHARING LIFETIME",
+    "price": 16000,
+    "description": "garansi 2 bulan"
+  },
+  {
+    "id": 83,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "iQIYI",
+    "name": "IQIYI SHARING 1 BULAN",
+    "price": 10000,
+    "description": "garansi 25 hari"
+  },
+  {
+    "id": 84,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Lightroom",
+    "name": "LIGHTROOM 1 TAHUN",
+    "price": 18000,
+    "description": "GARANSI 6 BULAN"
+  },
+  {
+    "id": 85,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Meitu",
+    "name": "MEITU 1 BULAN ANDROID",
+    "price": 24000,
+    "description": "GARANSI 7 HARI"
+  },
+  {
+    "id": 86,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Mubi",
+    "name": "MUBI PREMIUM PRIVATE 1 BULAN",
+    "price": 9000,
+    "description": "garansi 10 hari"
+  },
+  {
+    "id": 87,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Netflix",
+    "name": "NETFLIX SINGLE SCREEN 1 BULAN",
+    "price": 40000,
+    "description": "garansi 25 hari"
+  },
+  {
+    "id": 88,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "OldRoll",
+    "name": "OLDROLL SHARING LIFETIME ANDROID",
+    "price": 17000,
+    "description": "GARANSI 6 BULAN"
+  },
+  {
+    "id": 89,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Picsart",
+    "name": "PICART PRIVAT 1 BULAN",
+    "price": 7000,
+    "description": "GARANSI 7 HARI"
+  },
+  {
+    "id": 90,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Picsart",
+    "name": "PICART SHARING 1 BULAN",
+    "price": 5000,
+    "description": "GARANSI 7 HARI"
+  },
+  {
+    "id": 91,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Picsart",
+    "name": "PICSART PRO PRIVATE 1 BULAN",
+    "price": 9000,
+    "description": "GARANSI 1 BULAN"
+  },
+  {
+    "id": 92,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "PhotoRoom",
+    "name": "PHOTOROOM PRO PRIVATE 7 HARI",
+    "price": 5000,
+    "description": "Non Garansi"
+  },
+  {
+    "id": 93,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Prime Video",
+    "name": "PRIME VIDEO PRIVATE 1 BULAN",
+    "price": 14000,
+    "description": "garansi 10 hari"
+  },
+  {
+    "id": 94,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "ReelShort",
+    "name": "REELSHORT SHARING 1 BULAN",
+    "price": 18000,
+    "description": "garansi 25 hari S&K Berlaku"
+  },
+  {
+    "id": 95,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Remini",
+    "name": "REMINI 1 TAHUN",
+    "price": 20000,
+    "description": "GARANSI 6 BULAN"
+  },
+  {
+    "id": 96,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "AI",
+    "name": "SCITE AI PREMIUM PRIVATE 7 DAY",
+    "price": 5000,
+    "description": "NON GARANSI"
+  },
+  {
+    "id": 97,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Viki",
+    "name": "VIKI PASS STANDARD PRIVATE 7 HARI",
+    "price": 19000,
+    "description": "garansi 10 hari"
+  },
+  {
+    "id": 98,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Viki",
+    "name": "VIKI PASS STANDAR PRIVATE 1 BULAN",
+    "price": 19000,
+    "description": "garansi 10 hari"
+  },
+  {
+    "id": 99,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Viu",
+    "name": "VIU PREMIUM PRIVATE 12 BULAN",
+    "price": 6000,
+    "description": "garansi 6 bulan"
+  },
+  {
+    "id": 100,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "VSCO",
+    "name": "VSCO SHARING 12 BULAN ANDROID",
+    "price": 19000,
+    "description": "GARANSI 6 BULAN"
+  },
+  {
+    "id": 101,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "VSCO",
+    "name": "VSCO ANDROID 1 TAHUN",
+    "price": 20000,
+    "description": "GARANSI 6 BULAN"
+  },
+  {
+    "id": 102,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Wink",
+    "name": "WINK 1 BULAN PRIVAT",
+    "price": 25000,
+    "description": "GARANSI 25 HARI"
+  },
+  {
+    "id": 103,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Wink",
+    "name": "WINK 1 BULAN SHARING",
+    "price": 20000,
+    "description": "GARANSI 25 HARI"
+  },
+  {
+    "id": 104,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Wink",
+    "name": "WINK 7 HARI SHARING",
+    "price": 12000,
+    "description": "GARANSI 7 HARI"
+  },
+  {
+    "id": 105,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "Youku",
+    "name": "YOUKU SHARING 1 BULAN",
+    "price": 9000,
+    "description": "garansi 25 hari"
+  },
+  {
+    "id": 106,
+    "platform": "Aplikasi Premium",
+    "sub_platform": "YouTube",
+    "name": "YOUTUBE PREMIUM 1 BULAN",
+    "price": 6000,
+    "description": "garansi 25 hari"
+  }
 ]
