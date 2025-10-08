@@ -1,7 +1,6 @@
 /*
 ========================================================================
-|    KODE JAVASCRIPT UNTUK SOELTAN MEDSOS GTW MALES NGASIH JUDUL       |
-|                                                                      |
+|    gtw males   |
 ========================================================================
 */
 
@@ -22,6 +21,8 @@ const modalContent = document.getElementById('modal-content');
 const announcementModal = document.getElementById('announcement-modal');
 const announcementModalContent = document.getElementById('announcement-modal-content');
 const cartCount = document.getElementById('cart-count');
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
 const orderForm = document.getElementById('order-form');
 const platformSelect = document.getElementById('platform-select');
 const subPlatformContainer = document.getElementById('sub-platform-container');
@@ -56,7 +57,9 @@ async function fetchAnnouncement() {
         const response = await fetch('pengumuman.json');
         if (!response.ok) return;
         const announcement = await response.json();
-        showAnnouncementModal(announcement);
+        if (announcement && announcement.title && announcement.content) {
+            showAnnouncementModal(announcement);
+        }
     } catch (error) {
         console.error('Error fetching announcement:', error);
     }
@@ -67,19 +70,12 @@ function showToast(message, type = 'success') {
     toast.className = `toast ${type}`;
     toast.innerText = message;
     toastContainer.appendChild(toast);
-
-    // Memicu animasi
     setTimeout(() => {
         toast.classList.add('show');
     }, 100);
-
-    // Menghilangkan toast setelah 3 detik
     setTimeout(() => {
         toast.classList.remove('show');
-        // Menghapus elemen dari DOM setelah animasi selesai
-        toast.addEventListener('transitionend', () => {
-            toast.remove();
-        });
+        toast.addEventListener('transitionend', () => toast.remove());
     }, 3000);
 }
 
@@ -140,30 +136,36 @@ function populateServices(platform, subPlatform = null) {
 function updateFormDisplay() {
     const selectedPlatform = platformSelect.value;
     
+    // Reset state
+    subPlatformContainer.classList.add('hidden');
+    targetLinkContainer.classList.remove('hidden');
+    quantityInput.placeholder = 'Contoh: 1000';
     subPlatformSelect.value = '';
     serviceDropdown.value = '';
+    serviceDropdown.innerHTML = '<option value="">-- Pilih Kategori Dulu --</option>';
     serviceDropdown.disabled = true;
-    priceDisplay.innerText = 'Rp 0';
-    orderDetails.innerText = '-';
-    totalPriceDisplay.innerText = 'Rp 0';
+    updateFormOnServiceChange();
 
     if (!selectedPlatform) {
-        subPlatformContainer.classList.add('hidden');
         return;
     }
 
     if (selectedPlatform === 'Aplikasi Premium') {
         subPlatformContainer.classList.remove('hidden');
-        targetLinkContainer.classList.add('hidden');
-        quantityInput.placeholder = 'Contoh: 1';
+        targetLinkContainer.classList.add('hidden'); // Sembunyikan link target untuk Apk
+        quantityInput.placeholder = 'Contoh: 1'; // Ubah placeholder untuk Apk
         populateSubPlatforms(selectedPlatform);
     } else {
-        subPlatformContainer.classList.add('hidden');
-        targetLinkContainer.classList.remove('hidden');
-        quantityInput.placeholder = 'Contoh: 1000';
         populateServices(selectedPlatform);
         serviceDropdown.disabled = false;
     }
+}
+
+function updateFormOnServiceChange() {
+    const service = allServices.find(s => s.id === parseInt(serviceDropdown.value));
+    priceDisplay.innerText = service ? `Rp ${service.price.toLocaleString('id-ID')}` : 'Rp 0';
+    orderDetails.innerText = service ? service.description || '-' : '-';
+    calculateTotal();
 }
 
 function calculateTotal() {
@@ -216,23 +218,23 @@ function updateCartCount() {
 
 function showCartModal() {
     let content = `<h2 class="text-xl font-bold text-slate-900 mb-4">Keranjang Belanja</h2>`;
+    content += '<div class="flex-grow overflow-y-auto pr-2" style="max-height: 40vh;">';
     if (cart.length === 0) {
         content += '<p class="text-slate-500">Keranjang Anda kosong.</p>';
     } else {
-        content += '<div class="flex-grow overflow-y-auto pr-2" style="max-height: 40vh;">';
         cart.forEach((item, index) => {
             content += `<div class="flex justify-between items-start mb-3 border-b pb-3">
                 <div class="flex-1">
                     <p class="font-semibold text-slate-800 text-sm">${item.name}</p>
                     <p class="text-xs text-slate-500">Qty: ${item.quantity.toLocaleString('id-ID')}</p>
-                    <p class="text-xs text-slate-500 break-all mt-1">Link: ${item.link}</p>
+                    ${item.link !== '-' ? `<p class="text-xs text-slate-500 break-all mt-1">Link: ${item.link}</p>` : ''}
                     <p class="text-sm font-bold text-teal-600 mt-2">Rp ${(item.price * item.quantity).toLocaleString('id-ID')}</p>
                 </div>
                 <button onclick="removeItem(${index})" class="ml-4 px-2 py-1 bg-red-500 text-white text-xs font-bold rounded hover:bg-red-600">HAPUS</button>
             </div>`;
         });
-        content += '</div>';
     }
+    content += '</div>';
 
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     content += `
@@ -357,31 +359,46 @@ function showSuccessMessage(orderId) {
 }
 
 // ===============================================
-// BAGIAN 5: INISIALISASI & EVENT LISTENERS
+// BAGIAN 4: INISIALISASI & EVENT LISTENERS
 // ===============================================
 document.addEventListener('DOMContentLoaded', async () => {
+    // Event listener untuk menu mobile
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    }
+
+    // Event listener untuk menutup modal
+    if (modalContainer) {
+        modalContainer.addEventListener('click', (event) => { if (event.target === modalContainer) closeModal(); });
+    }
+    if (announcementModal) {
+        announcementModal.addEventListener('click', (event) => { if (event.target === announcementModal) closeAnnouncementModal(); });
+    }
+
+    // Muat data dan inisialisasi form
     await Promise.all([fetchServices(), fetchAnnouncement()]);
     
-    platformSelect.addEventListener('change', updateFormDisplay);
-
-    subPlatformSelect.addEventListener('change', () => {
-        const platform = platformSelect.value;
-        const subPlatform = subPlatformSelect.value;
-        serviceDropdown.value = '';
-        if (subPlatform) {
-            populateServices(platform, subPlatform);
-            serviceDropdown.disabled = false;
-        } else {
-            serviceDropdown.disabled = true;
-        }
-    });
+    updateCartCount();
     
-    serviceDropdown.addEventListener('change', () => {
-        const service = allServices.find(s => s.id === parseInt(serviceDropdown.value));
-        priceDisplay.innerText = service ? `Rp ${service.price.toLocaleString('id-ID')}` : 'Rp 0';
-        orderDetails.innerText = service ? service.description || '-' : '-';
-        calculateTotal();
-    });
+    if (orderForm) {
+        platformSelect.addEventListener('change', updateFormDisplay);
 
-    quantityInput.addEventListener('input', calculateTotal);
+        subPlatformSelect.addEventListener('change', () => {
+            const platform = platformSelect.value;
+            const subPlatform = subPlatformSelect.value;
+            serviceDropdown.value = '';
+            if (subPlatform) {
+                populateServices(platform, subPlatform);
+                serviceDropdown.disabled = false;
+            } else {
+                serviceDropdown.innerHTML = '<option value="">-- Pilih Aplikasi Dulu --</option>';
+                serviceDropdown.disabled = true;
+            }
+            updateFormOnServiceChange();
+        });
+        
+        serviceDropdown.addEventListener('change', updateFormOnServiceChange);
+
+        quantityInput.addEventListener('input', calculateTotal);
+    }
 });
