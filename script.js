@@ -1,7 +1,7 @@
 /*
 ========================================================================
-|         KODE JAVASCRIPT UNTUK SOELTAN MEDSOS (V9 - FINAL(Harus nya))            |
-|                                                                     |
+|    KODE JAVASCRIPT UNTUK SOELTAN MEDSOS GTW MALES NGASIH JUDUL       |
+|                                                                      |
 ========================================================================
 */
 
@@ -14,103 +14,122 @@ const API_KEY = 'MasDidik123';
 // ===============================================
 // BAGIAN 2: STATE APLIKASI & ELEMEN DOM
 // ===============================================
-let cart = []; // State utama untuk menampung item di keranjang
+let cart = [];
+let allServices = [];
 
-// Elemen DOM yang sering digunakan
 const modalContainer = document.getElementById('modal-container');
 const modalContent = document.getElementById('modal-content');
+const announcementModal = document.getElementById('announcement-modal');
+const announcementModalContent = document.getElementById('announcement-modal-content');
 const cartCount = document.getElementById('cart-count');
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
 const orderForm = document.getElementById('order-form');
 const platformSelect = document.getElementById('platform-select');
+const subPlatformContainer = document.getElementById('sub-platform-container');
+const subPlatformSelect = document.getElementById('sub-platform-select');
 const serviceDropdown = document.getElementById('service-dropdown');
 const priceDisplay = document.getElementById('price-display');
 const orderDetails = document.getElementById('order-details');
 const quantityInput = document.getElementById('quantity-input');
 const totalPriceDisplay = document.getElementById('total-price');
+const targetLinkContainer = document.getElementById('target-link-container');
 const targetLinkInput = document.getElementById('target-link');
+const toastContainer = document.getElementById('toast-container');
+
 
 // ===============================================
-// BAGIAN 3: DATABASE LAYANAN
-// ===============================================
-const allServices = [
-    { id: 1, platform: 'TikTok', name: 'Tiktok Share', price: 3, description: '(MAX 100K)' },
-    { id: 2, platform: 'TikTok', name: 'Tiktok Share (Refil 7 Days)', price: 5, description: '(MAX 100K)(Refil 7 Days)' },
-    { id: 3, platform: 'TikTok', name: 'Tiktok Share (INSTAN)', price: 6, description: '(MAX 100K)(Refil 30 Days)(Non Drop)' },
-    { id: 4, platform: 'TikTok', name: 'Tiktok Coment Like', price: 6, description: '(MAX 100K)(Super Fast)' },
-    { id: 5, platform: 'TikTok', name: 'Tiktok Rondom Coment', price: 26, description: '(Start Time 1 - 4 Hour)' },
-    { id: 6, platform: 'TikTok', name: 'Tiktok Costume Coment', price: 40, description: '(Kirim costume komen ke admin untuk di proses)' },
-    { id: 7, platform: 'TikTok', name: 'Tiktok Costume Coment Indoneisa', price: 380, description: '(Kirim costume komen ke admin untuk di proses)' },
-    { id: 8, platform: 'TikTok', name: 'Tiktok Folowers Mix', price: 50, description: '(MAX 200K)(7 Days Refil)' },
-    { id: 9, platform: 'TikTok', name: 'Tiktok Folowers Real Accounts (HQ)', price: 55, description: '(MAX 300K)(15 Days Refil)' },
-    { id: 10, platform: 'TikTok', name: 'Tiktok Folowers HQ Accounts (Real)', price: 70, description: '(MAX 300K)(30 Days Refil)' },
-    { id: 11, platform: 'TikTok', name: 'Tiktok Followers Indonesia', price: 99, description: '(30 Days Refil)(500/day)(MAX 5K)' },
-    { id: 12, platform: 'TikTok', name: 'Tiktok Like Indonesia (HQ)', price: 20, description: '(15k/Days)(No Refil)' },
-    { id: 13, platform: 'TikTok', name: 'Tiktok Like (SuperInstan)', price: 2, description: '(7 Days Refil)' },
-    { id: 14, platform: 'TikTok', name: 'Tiktok Like (HQ & Real Profil)', price: 3, description: '(30 Days Refil)(SuperInstan)' },
-    { id: 15, platform: 'TikTok', name: 'Tiktok Story Like', price: 12, description: '(MAX 100K)(NO REFIL)' },
-    { id: 16, platform: 'TikTok', name: 'Tiktok Story View', price: 12, description: '(MAX 100K)(NO REFIL)' },
-    { id: 17, platform: 'TikTok', name: 'Tiktok View Bonus Like', price: 6, description: '(FAST)(NO REFIL)(RONDOM COUNTRY)(DROP 0-5%)' },
-    { id: 18, platform: 'TikTok', name: 'Tiktok View (FAST)', price: 1, description: '(Instan Start)(Non Drop)(Unlimited)' },
-    { id: 19, platform: 'Instagram', name: 'Instagram Channel Member', price: 18, description: '(Global)(MAX 1M)(HQ Real)(Instan)(No Refil)' },
-    { id: 20, platform: 'Instagram', name: 'Instagram Channel Member (Refil)', price: 25, description: '(Global)(MAX 1M)(HQ Real)(Instan)(15 Days Refil)' },
-    { id: 21, platform: 'Instagram', name: 'Instagram Costume Coment', price: 100, description: '(No Refil)(Slow)' },
-    { id: 22, platform: 'Instagram', name: 'Instagram Costume Coment Indonesia', price: 330, description: '(No Refil)(HQ(Slow)' },
-    { id: 23, platform: 'Instagram', name: 'Instagram Followers Indonesia', price: 100, description: '(Real Aktif)(Refil 7 Days)(MAX 3K)' },
-    { id: 24, platform: 'Instagram', name: 'Instagram Followers Less Drop', price: 60, description: '(100k/Days)(Refil 14 Days)' },
-    { id: 25, platform: 'Instagram', name: 'Instagram Followers Less Drop (SuperFast)', price: 90, description: '(100k/Days)(Refil 30 Days)' },
-    { id: 26, platform: 'Instagram', name: 'Instagram Like Indonesia (Fast)', price: 15, description: '(Max 1k)(30 DayS Refil)' },
-    { id: 27, platform: 'Instagram', name: 'Instagram Like (HQ)', price: 8, description: '(Fast)(Max 10k)(30 DayS Refil)' },
-    { id: 28, platform: 'Instagram', name: 'Instagram Like (LQ)', price: 5, description: '(Slow)(Max 10k)(30 DayS Refil)' },
-    { id: 29, platform: 'Instagram', name: 'Instaram Reels View', price: 1, description: '(MAX 1M)' },
-    { id: 30, platform: 'Instagram', name: 'Instaram Reels Like', price: 15, description: '(MAX 1M)' },
-    { id: 31, platform: 'Instagram', name: 'Instagram Share', price: 4, description: '(Speed 50k/Days)' },
-    { id: 32, platform: 'Instagram', name: 'Instagram Story View Indonesia', price: 5, description: '(NO REFIL)' },
-    { id: 33, platform: 'Instagram', name: 'Instagram Story View (HQ)', price: 3, description: '(All Story)(NO REFIL)' },
-    { id: 34, platform: 'Instagram', name: 'Instagram View', price: 1, description: '(All Video Link)(No Refil)' },
-    { id: 35, platform: 'Instagram', name: 'Instagram View Live', price: 200, description: '(Live Strem Video)(No Refil)' },
-    { id: 36, platform: 'YouTube', name: 'Youtube Like', price: 4, description: '(Instan Start)(No Refil)(Max 1M)' },
-    { id: 37, platform: 'YouTube', name: 'Youtube Like (Refil 7 Days)', price: 5, description: '(Instan Start)(Max 1M)' },
-    { id: 38, platform: 'YouTube', name: 'Youtube Like Short', price: 25, description: '(No Refil)(Max 1M)' },
-    { id: 39, platform: 'YouTube', name: 'Youtube Like Short (Refil)', price: 30, description: '(Max 1M)' },
-    { id: 40, platform: 'YouTube', name: 'Youtube Subscribers (High Drop)', price: 25, description: '(No Komplain)(No Refil)' },
-    { id: 41, platform: 'YouTube', name: 'Youtube Subscribers (Refil 7 Days)', price: 60, description: '(100 - 200/days)(MAX 10K)' },
-    { id: 42, platform: 'YouTube', name: 'Youtube View', price: 32, description: '(99,9% Non Drop)(Direct+overdelivery)(max 25k/dats)' },
-    { id: 43, platform: 'YouTube', name: 'Youtube View Jam Tayang (15 min video)', price: 370, description: '(Speed 100/Hours)(15 days refil)' },
-    { id: 44, platform: 'YouTube', name: 'Youtube View Jam Tayang (30 min video)', price: 480, description: '(Speed 100/Hours)(15 days refil)' },
-    { id: 45, platform: 'YouTube', name: 'Youtube View Jam Tayang (60 min video)', price: 1300, description: '(Speed 100/Hours)(15 days refil)' },
-    { id: 46, platform: 'Facebook', name: 'Facebook Followers Profile', price: 20, description: '(No Refil)(100k/Days)' },
-    { id: 47, platform: 'Facebook', name: 'Facebook Followers Profile (Refil 7 Days)', price: 26, description: '(100k/Days)' },
-    { id: 48, platform: 'Facebook', name: 'Facebook Group Member', price: 20, description: '(MAX 10K)(NO REFIL)' },
-    { id: 49, platform: 'Facebook', name: 'Facebook Post Like', price: 20, description: '(NO REFIL)(Real Profil)' },
-    { id: 50, platform: 'Facebook', name: 'Facebook Post Like (Refil 7 days)', price: 24, description: '(Real Profil)' },
-    { id: 51, platform: 'Facebook', name: 'Facebook Post Share', price: 10, description: '(Real Profil)(7 days refil)' },
-    { id: 52, platform: 'Tiktok Paket FYP', name: 'Tiktok FYP V1', price: 98000, description: 'PAKET FYP V1 (200.000 View)(100.000 Like)(10.000 Share)(1.000 Save/Favorit)' },
-    { id: 53, platform: 'Tiktok Paket FYP', name: 'Tiktok FYP V2', price: 50000, description: 'PAKET FYP V2 (100.000 View)(50.000 Like)(5.000 Share)(500 Save/Favorit)' },
-    { id: 54, platform: 'Tiktok Paket FYP', name: 'Tiktok FYP V3', price: 30000, description: 'PAKET FYP V3 (50.000 View)(10.000 Like)(3.000 Share)(3.000 Save/Favorit)' },
-    { id: 55, platform: 'Whatsapp', name: 'Whatsapp Channel Post Reaction [ 👍 ]', price: 20, description: '(Max 1K) (Instant)' },
-    { id: 56, platform: 'Whatsapp', name: 'Whatsapp Channel Post Reaction [ ❤️ ]', price: 20, description: '(Max 1K) (Instant)' },
-    { id: 57, platform: 'Whatsapp', name: 'Whatsapp Channel Post Reaction [ 😂 ]', price: 20, description: '(Max 1K) (Instant)' }, 
-    { id: 58, platform: 'Whatsapp', name: 'Whatsapp Channel Post Reaction [ Mix 👍❤️😂😲😥🙏 ]', price: 20, description: '(Max 50K) (Instant)' },
-    { id: 59, platform: 'Whatsapp', name: 'Whatsapp Channel Member', price: 36, description: '(Global)(Max 50K)(HQ Profiles)(500/days)' },
-    { id: 60, platform: 'Telegram', name: 'Telegram Channel Group/Member', price: 21, description: '(Global)(Max 100K)(7 Days Refil)(25k/days)' },
-    { id: 61, platform: 'Telegram', name: 'Telegram Post View', price: 21, description: '(Superfast)(Max 50m)(No Refil)' },
-    { id: 62, platform: 'Telegram', name: 'Telegram Positive  Reaction (S1)(Mix👍 ❤️ 🔥 🎉🤩 😁 + Views)', price: 21, description: '(Max 200K)(10K/days)(No Refil)' },
-    { id: 63, platform: 'Telegram', name: 'Telegram Story View', price: 21, description: '(HQ Services)(Max: 500K)(50K/days)(No Refil)' },
-    { id: 64, platform: 'Google Maps', name: 'Rating Only', price: 6000, description: '(HQ Services)(Max: 500K)(50K/days)(No Refil)' },
-    { id: 65, platform: 'Google Maps', name: 'Rating dan Ulasan', price: 8500, description: '(HQ Services)(Max: 500K)(50K/days)(No Refil)' },
-    { id: 66, platform: 'Google Maps', name: 'Rating dan Foto', price: 19000, description: '(HQ Services)(Max: 500K)(50K/days)(No Refil)' },
-];
-
-// ===============================================
-// BAGIAN 4: FUNGSI-FUNGSI LOGIKA APLIKASI
+// BAGIAN 3: FUNGSI-FUNGSI UTAMA
 // ===============================================
 
-/** Mengisi dropdown layanan berdasarkan data yang difilter. */
-function populateServices(services) {
+async function fetchServices() {
+    try {
+        const response = await fetch('service.json');
+        if (!response.ok) throw new Error('Gagal memuat data layanan.');
+        allServices = await response.json();
+        populatePlatforms();
+    } catch (error) {
+        showToast(error.message, 'error');
+    }
+}
+
+async function fetchAnnouncement() {
+    try {
+        const response = await fetch('pengumuman.json');
+        if (!response.ok) return;
+        const announcement = await response.json();
+        showAnnouncementModal(announcement);
+    } catch (error) {
+        console.error('Error fetching announcement:', error);
+    }
+}
+
+function showToast(message, type = 'success') {
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.innerText = message;
+    toastContainer.appendChild(toast);
+
+    // Memicu animasi
+    setTimeout(() => {
+        toast.classList.add('show');
+    }, 100);
+
+    // Menghilangkan toast setelah 3 detik
+    setTimeout(() => {
+        toast.classList.remove('show');
+        // Menghapus elemen dari DOM setelah animasi selesai
+        toast.addEventListener('transitionend', () => {
+            toast.remove();
+        });
+    }, 3000);
+}
+
+function showAnnouncementModal(announcement) {
+    announcementModalContent.innerHTML = `
+        <h2 class="text-xl font-bold text-slate-900 mb-4">${announcement.title}</h2>
+        <div class="flex-grow overflow-y-auto pr-2" style="max-height: 40vh;">${announcement.content}</div>
+        <div class="flex justify-end mt-6">
+            <button type="button" onclick="closeAnnouncementModal()" class="px-4 py-2 bg-teal-500 hover:bg-teal-600 text-white font-semibold rounded-lg text-sm">Tutup</button>
+        </div>`;
+    announcementModal.classList.remove('hidden');
+}
+
+function closeAnnouncementModal() {
+    announcementModal.classList.add('hidden');
+}
+
+function populatePlatforms() {
+    const uniquePlatforms = [...new Set(allServices.map(service => service.platform))];
+    platformSelect.innerHTML = '<option value="">-- Pilih Kategori --</option>';
+    uniquePlatforms.forEach(platform => {
+        const option = document.createElement('option');
+        option.value = platform;
+        option.innerText = platform;
+        platformSelect.appendChild(option);
+    });
+}
+
+function populateSubPlatforms(platform) {
+    const subPlatforms = [...new Set(allServices
+        .filter(s => s.platform === platform && s.sub_platform)
+        .map(s => s.sub_platform))];
+    
+    subPlatformSelect.innerHTML = '<option value="">-- Pilih Aplikasi --</option>';
+    subPlatforms.forEach(sub => {
+        const option = document.createElement('option');
+        option.value = sub;
+        option.innerText = sub;
+        subPlatformSelect.appendChild(option);
+    });
+}
+
+function populateServices(platform, subPlatform = null) {
+    let filteredServices = allServices.filter(s => s.platform === platform);
+    if (subPlatform) {
+        filteredServices = filteredServices.filter(s => s.sub_platform === subPlatform);
+    }
+    
     serviceDropdown.innerHTML = '<option value="">-- Pilih Layanan --</option>';
-    services.forEach(service => {
+    filteredServices.forEach(service => {
         const option = document.createElement('option');
         option.value = service.id;
         option.innerText = service.name;
@@ -118,137 +137,129 @@ function populateServices(services) {
     });
 }
 
-/** Mengupdate tampilan form saat layanan baru dipilih. */
-function updateFormOnServiceChange() {
-    const selectedId = parseInt(serviceDropdown.value);
-    const service = allServices.find(s => s.id === selectedId);
-    if (service) {
-        priceDisplay.innerText = `Rp ${service.price.toLocaleString('id-ID')}`;
-        orderDetails.innerText = service.description || '-';
-    } else {
-        priceDisplay.innerText = 'Rp 0';
-        orderDetails.innerText = '-';
-    }
-    calculateTotal();
-}
-
-/** Menghitung total harga secara real-time. */
-function calculateTotal() {
-    const selectedId = parseInt(serviceDropdown.value);
-    const service = allServices.find(s => s.id === selectedId);
-    const quantity = parseInt(quantityInput.value) || 0;
-    if (service && quantity > 0) {
-        totalPriceDisplay.innerText = `Rp ${(service.price * quantity).toLocaleString('id-ID')}`;
-    } else {
-        totalPriceDisplay.innerText = 'Rp 0';
-    }
-}
-
-/** Mengembalikan form ke keadaan semula. */
-function resetFormState() {
-    orderForm.reset();
+function updateFormDisplay() {
+    const selectedPlatform = platformSelect.value;
+    
+    subPlatformSelect.value = '';
+    serviceDropdown.value = '';
+    serviceDropdown.disabled = true;
     priceDisplay.innerText = 'Rp 0';
     orderDetails.innerText = '-';
     totalPriceDisplay.innerText = 'Rp 0';
-    serviceDropdown.innerHTML = '<option value="">-- Pilih Platform Dulu --</option>';
-    serviceDropdown.disabled = true;
+
+    if (!selectedPlatform) {
+        subPlatformContainer.classList.add('hidden');
+        return;
+    }
+
+    if (selectedPlatform === 'Aplikasi Premium') {
+        subPlatformContainer.classList.remove('hidden');
+        targetLinkContainer.classList.add('hidden');
+        quantityInput.placeholder = 'Contoh: 1';
+        populateSubPlatforms(selectedPlatform);
+    } else {
+        subPlatformContainer.classList.add('hidden');
+        targetLinkContainer.classList.remove('hidden');
+        quantityInput.placeholder = 'Contoh: 1000';
+        populateServices(selectedPlatform);
+        serviceDropdown.disabled = false;
+    }
 }
 
-/** Memvalidasi input pada form utama sebelum tambah ke keranjang. */
-function validateForm() {
+function calculateTotal() {
+    const service = allServices.find(s => s.id === parseInt(serviceDropdown.value));
+    const quantity = parseInt(quantityInput.value) || 0;
+    totalPriceDisplay.innerText = (service && quantity > 0) ? `Rp ${(service.price * quantity).toLocaleString('id-ID')}` : 'Rp 0';
+}
+
+function handleAddToCart() {
+    const service = allServices.find(s => s.id === parseInt(serviceDropdown.value));
+    
     if (!platformSelect.value) {
-        alert('Harap pilih platform terlebih dahulu.');
-        return false;
+        showToast('Harap pilih kategori terlebih dahulu.', 'error');
+        return;
+    }
+    if (platformSelect.value === 'Aplikasi Premium' && !subPlatformSelect.value) {
+        showToast('Harap pilih aplikasi terlebih dahulu.', 'error');
+        return;
     }
     if (!serviceDropdown.value) {
-        alert('Harap pilih layanan terlebih dahulu.');
-        return false;
+        showToast('Harap pilih layanan terlebih dahulu.', 'error');
+        return;
     }
     const quantity = parseInt(quantityInput.value);
     if (!quantity || quantity < 1) {
-        alert('Harap isi jumlah dengan benar (minimal 1).');
-        return false;
+        showToast('Harap isi jumlah dengan benar (minimal 1).', 'error');
+        return;
     }
-    if (!targetLinkInput.value) {
-        alert('Harap isi Link Target.');
-        return false;
+    if (platformSelect.value !== 'Aplikasi Premium' && !targetLinkInput.value) {
+        showToast('Harap isi Link Target.', 'error');
+        return;
     }
-    return true; // Semua valid
-}
 
-/** Menambahkan item ke keranjang belanja setelah validasi. */
-function handleAddToCart() {
-    if (!validateForm()) return;
-    
-    const selectedId = parseInt(serviceDropdown.value);
-    const service = allServices.find(s => s.id === selectedId);
-    
     cart.push({
         name: `[${service.platform}] ${service.name}`,
         price: service.price,
-        quantity: parseInt(quantityInput.value),
-        link: targetLinkInput.value,
+        quantity: quantity,
+        link: platformSelect.value === 'Aplikasi Premium' ? '-' : targetLinkInput.value,
     });
-
+    
     updateCartCount();
-    showNotification(`${parseInt(quantityInput.value).toLocaleString('id-ID')} ${service.name} ditambahkan.`);
-    resetFormState();
+    showToast(`${quantity} ${service.name} ditambahkan.`);
+    orderForm.reset();
+    updateFormDisplay();
 }
 
-/** Mengupdate angka di ikon keranjang. */
 function updateCartCount() {
     cartCount.innerText = cart.length;
 }
 
-/** Menampilkan notifikasi singkat. */
-function showNotification(message) {
-    const oldNotif = document.getElementById('cart-notification');
-    if (oldNotif) oldNotif.remove();
-    const notif = document.createElement('div');
-    notif.id = 'cart-notification';
-    notif.className = 'fixed bottom-5 right-5 bg-teal-500 text-white py-2 px-4 rounded-lg shadow-lg z-50 font-semibold';
-    notif.innerText = message;
-    document.body.appendChild(notif);
-    setTimeout(() => { notif.remove(); }, 3000);
-}
-
-/** Menampilkan modal keranjang belanja. */
 function showCartModal() {
     let content = `<h2 class="text-xl font-bold text-slate-900 mb-4">Keranjang Belanja</h2>`;
-    content += `<div class="flex-grow overflow-y-auto pr-2" style="max-height: 40vh;">`;
     if (cart.length === 0) {
         content += '<p class="text-slate-500">Keranjang Anda kosong.</p>';
     } else {
+        content += '<div class="flex-grow overflow-y-auto pr-2" style="max-height: 40vh;">';
         cart.forEach((item, index) => {
-            content += `
-                <div class="flex justify-between items-start mb-3 border-b border-slate-200 pb-3">
-                    <div class="flex-1"><p class="font-semibold text-slate-800 text-sm">${item.name}</p><p class="text-xs text-slate-500">Qty: ${item.quantity.toLocaleString('id-ID')}</p><p class="text-xs text-slate-500 break-all mt-1">Link: ${item.link}</p><p class="text-sm font-bold text-teal-600 mt-2">Rp ${(item.price * item.quantity).toLocaleString('id-ID')}</p></div>
-                    <button onclick="removeItem(${index})" class="ml-4 px-2 py-1 bg-red-500 text-white text-xs font-bold rounded hover:bg-red-600">HAPUS</button>
-                </div>`;
+            content += `<div class="flex justify-between items-start mb-3 border-b pb-3">
+                <div class="flex-1">
+                    <p class="font-semibold text-slate-800 text-sm">${item.name}</p>
+                    <p class="text-xs text-slate-500">Qty: ${item.quantity.toLocaleString('id-ID')}</p>
+                    <p class="text-xs text-slate-500 break-all mt-1">Link: ${item.link}</p>
+                    <p class="text-sm font-bold text-teal-600 mt-2">Rp ${(item.price * item.quantity).toLocaleString('id-ID')}</p>
+                </div>
+                <button onclick="removeItem(${index})" class="ml-4 px-2 py-1 bg-red-500 text-white text-xs font-bold rounded hover:bg-red-600">HAPUS</button>
+            </div>`;
         });
+        content += '</div>';
     }
-    content += `</div>`;
+
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     content += `
-        <div class="border-t border-slate-200 pt-4 mt-4">
-            <div class="flex justify-between items-center mb-4"><span class="text-base font-semibold text-slate-800">Total:</span><span class="text-lg font-bold text-teal-600">Rp ${total.toLocaleString('id-ID')}</span></div>
+        <div class="border-t pt-4 mt-4">
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-base font-semibold">Total:</span>
+                <span class="text-lg font-bold text-teal-600">Rp ${total.toLocaleString('id-ID')}</span>
+            </div>
             <div class="flex justify-end space-x-3">
-                <button onclick="closeModal()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-lg text-sm">Tutup</button>
-                <button onclick="showCheckoutForm()" class="px-4 py-2 bg-teal-500 hover:bg-teal-600 text-white font-semibold rounded-lg text-sm ${cart.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}" ${cart.length === 0 ? 'disabled' : ''}>Lanjut ke Pembayaran</button>
+                <button onclick="closeModal()" class="px-4 py-2 bg-slate-200 rounded-lg text-sm">Tutup</button>
+                <button onclick="showCheckoutForm()" class="px-4 py-2 bg-teal-500 text-white font-semibold rounded-lg text-sm ${!cart.length && 'opacity-50 cursor-not-allowed'}" ${!cart.length && 'disabled'}>Lanjut Bayar</button>
             </div>
         </div>`;
     modalContent.innerHTML = content;
     modalContainer.classList.remove('hidden');
 }
 
-/** Menghapus item dari keranjang. */
+function closeModal() {
+    modalContainer.classList.add('hidden');
+}
+
 function removeItem(index) {
     cart.splice(index, 1);
     updateCartCount();
     showCartModal();
 }
 
-/** Menampilkan form checkout & pembayaran. */
 function showCheckoutForm() {
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     modalContent.innerHTML = `
@@ -271,76 +282,69 @@ function showCheckoutForm() {
     document.getElementById('checkout-form').addEventListener('submit', handleFormSubmit);
 }
 
-/** Menangani pengiriman form checkout. */
 function handleFormSubmit(e) {
     e.preventDefault();
     const submitBtn = document.getElementById('submit-button');
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = `<span>Mengirim...</span>`;
-    
     const nama = document.getElementById('nama-checkout').value;
     const email = document.getElementById('email-checkout').value;
     const no_wa = document.getElementById('wa-checkout').value;
     const file = document.getElementById('file').files[0];
 
-    if (!nama || !email || !no_wa) {
-        alert("Harap lengkapi Nama, Email, dan No WhatsApp.");
-        submitBtn.disabled = false; submitBtn.innerHTML = `<span>Kirim Pesanan</span>`; return;
-    }
-    if (!file) {
-        alert("Harap unggah bukti pembayaran.");
-        submitBtn.disabled = false; submitBtn.innerHTML = `<span>Kirim Pesanan</span>`; return;
+    if (!nama || !email || !no_wa || !file) {
+        showToast("Harap lengkapi semua data dan unggah bukti pembayaran.", 'error');
+        return;
     }
     if (file.size > 1.5 * 1024 * 1024) {
-        alert("Ukuran file terlalu besar! Harap pilih file di bawah 1.5 MB.");
-        submitBtn.disabled = false; submitBtn.innerHTML = `<span>Kirim Pesanan</span>`; return;
+        showToast("Ukuran file terlalu besar! Maksimal 1.5 MB.", 'error');
+        return;
     }
+    
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `<span>Mengirim...</span>`;
 
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onloadend = () => sendData(buildDataPayload(nama, email, no_wa, file.name, file.type, reader.result.split(',')[1]));
     reader.onerror = () => {
-        alert("Gagal membaca file. Coba lagi.");
-        submitBtn.disabled = false; submitBtn.innerHTML = `<span>Kirim Pesanan</span>`;
+        showToast("Gagal membaca file. Coba lagi.", 'error');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `<span>Kirim Pesanan</span>`;
     };
 }
 
-/** Membangun payload data untuk dikirim ke Google Apps Script. */
 function buildDataPayload(nama, email, no_wa, fileName, mimeType, fileData) {
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const pesanan = cart.map(item => `${item.name} | Qty: ${item.quantity.toLocaleString('id-ID')} | Link: ${item.link}`).join('\n');
     return {
         nama, email, no_wa,
-        link: cart.length === 1 ? cart[0].link : "Lihat detail pesanan di bawah",
+        link: cart.length === 1 ? cart[0].link : "Lihat detail pesanan",
         pesanan, total, fileName, mimeType, fileData,
         apiKey: API_KEY
     };
 }
 
-/** Mengirim data ke backend Google Apps Script. */
 function sendData(data) {
     fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(data) })
     .then(res => res.json())
     .then(response => {
-        const submitBtn = document.getElementById('submit-button');
         if (response.result === "success") {
             showSuccessMessage(response.orderId);
             cart = [];
             updateCartCount();
         } else {
-            alert('Gagal mengirim pesanan: ' + (response.message || 'Terjadi kesalahan.'));
-            if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = `<span>Kirim Pesanan</span>`; }
+            throw new Error(response.message || 'Terjadi kesalahan.');
         }
     })
     .catch(error => {
-        console.error('Error:', error);
-        alert('Gagal mengirim pesanan. Periksa koneksi Anda atau hubungi admin.');
+        showToast('Gagal mengirim pesanan: ' + error.message, 'error');
         const submitBtn = document.getElementById('submit-button');
-        if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = `<span>Kirim Pesanan</span>`; }
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = `<span>Kirim Pesanan</span>`;
+        }
     });
 }
 
-/** Menampilkan pesan sukses setelah pesanan terkirim. */
 function showSuccessMessage(orderId) {
     modalContent.innerHTML = `
         <div class="text-center">
@@ -352,33 +356,32 @@ function showSuccessMessage(orderId) {
         </div>`;
 }
 
-/** Menutup modal. */
-function closeModal() {
-    modalContainer.classList.add('hidden');
-}
-
 // ===============================================
 // BAGIAN 5: INISIALISASI & EVENT LISTENERS
 // ===============================================
-document.addEventListener('DOMContentLoaded', () => {
-    updateCartCount();
-    mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-    modalContainer.addEventListener('click', (event) => { if (event.target === modalContainer) closeModal(); });
+document.addEventListener('DOMContentLoaded', async () => {
+    await Promise.all([fetchServices(), fetchAnnouncement()]);
+    
+    platformSelect.addEventListener('change', updateFormDisplay);
 
-    if (orderForm) {
-        platformSelect.addEventListener('change', () => {
-            const selectedPlatform = platformSelect.value;
-            serviceDropdown.value = '';
-            updateFormOnServiceChange();
-            if (selectedPlatform) {
-                populateServices(allServices.filter(service => service.platform === selectedPlatform));
-                serviceDropdown.disabled = false;
-            } else {
-                serviceDropdown.innerHTML = '<option value="">-- Pilih Platform Dulu --</option>';
-                serviceDropdown.disabled = true;
-            }
-        });
-        serviceDropdown.addEventListener('change', updateFormOnServiceChange);
-        quantityInput.addEventListener('input', calculateTotal);
-    }
+    subPlatformSelect.addEventListener('change', () => {
+        const platform = platformSelect.value;
+        const subPlatform = subPlatformSelect.value;
+        serviceDropdown.value = '';
+        if (subPlatform) {
+            populateServices(platform, subPlatform);
+            serviceDropdown.disabled = false;
+        } else {
+            serviceDropdown.disabled = true;
+        }
+    });
+    
+    serviceDropdown.addEventListener('change', () => {
+        const service = allServices.find(s => s.id === parseInt(serviceDropdown.value));
+        priceDisplay.innerText = service ? `Rp ${service.price.toLocaleString('id-ID')}` : 'Rp 0';
+        orderDetails.innerText = service ? service.description || '-' : '-';
+        calculateTotal();
+    });
+
+    quantityInput.addEventListener('input', calculateTotal);
 });

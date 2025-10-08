@@ -1,0 +1,784 @@
+[
+    {
+        "id": 1,
+        "platform": "TikTok",
+        "name": "Tiktok Share",
+        "price": 3,
+        "description": "(MAX 100K)"
+    },
+    {
+        "id": 2,
+        "platform": "TikTok",
+        "name": "Tiktok Share (Refil 7 Days)",
+        "price": 5,
+        "description": "(MAX 100K)(Refil 7 Days)"
+    },
+    {
+        "id": 3,
+        "platform": "TikTok",
+        "name": "Tiktok Share (INSTAN)",
+        "price": 6,
+        "description": "(MAX 100K)(Refil 30 Days)(Non Drop)"
+    },
+    {
+        "id": 4,
+        "platform": "TikTok",
+        "name": "Tiktok Coment Like",
+        "price": 6,
+        "description": "(MAX 100K)(Super Fast)"
+    },
+    {
+        "id": 5,
+        "platform": "TikTok",
+        "name": "Tiktok Rondom Coment",
+        "price": 26,
+        "description": "(Start Time 1 - 4 Hour)"
+    },
+    {
+        "id": 6,
+        "platform": "TikTok",
+        "name": "Tiktok Costume Coment",
+        "price": 40,
+        "description": "(Kirim costume komen ke admin untuk di proses)"
+    },
+    {
+        "id": 7,
+        "platform": "TikTok",
+        "name": "Tiktok Costume Coment Indoneisa",
+        "price": 380,
+        "description": "(Kirim costume komen ke admin untuk di proses)"
+    },
+    {
+        "id": 8,
+        "platform": "TikTok",
+        "name": "Tiktok Folowers Mix",
+        "price": 50,
+        "description": "(MAX 200K)(7 Days Refil)"
+    },
+    {
+        "id": 9,
+        "platform": "TikTok",
+        "name": "Tiktok Folowers Real Accounts (HQ)",
+        "price": 55,
+        "description": "(MAX 300K)(15 Days Refil)"
+    },
+    {
+        "id": 10,
+        "platform": "TikTok",
+        "name": "Tiktok Folowers HQ Accounts (Real)",
+        "price": 70,
+        "description": "(MAX 300K)(30 Days Refil)"
+    },
+    {
+        "id": 11,
+        "platform": "TikTok",
+        "name": "Tiktok Followers Indonesia",
+        "price": 99,
+        "description": "(30 Days Refil)(500/day)(MAX 5K)"
+    },
+    {
+        "id": 12,
+        "platform": "TikTok",
+        "name": "Tiktok Like Indonesia (HQ)",
+        "price": 20,
+        "description": "(15k/Days)(No Refil)"
+    },
+    {
+        "id": 13,
+        "platform": "TikTok",
+        "name": "Tiktok Like (SuperInstan)",
+        "price": 2,
+        "description": "(7 Days Refil)"
+    },
+    {
+        "id": 14,
+        "platform": "TikTok",
+        "name": "Tiktok Like (HQ & Real Profil)",
+        "price": 3,
+        "description": "(30 Days Refil)(SuperInstan)"
+    },
+    {
+        "id": 15,
+        "platform": "TikTok",
+        "name": "Tiktok Story Like",
+        "price": 12,
+        "description": "(MAX 100K)(NO REFIL)"
+    },
+    {
+        "id": 16,
+        "platform": "TikTok",
+        "name": "Tiktok Story View",
+        "price": 12,
+        "description": "(MAX 100K)(NO REFIL)"
+    },
+    {
+        "id": 17,
+        "platform": "TikTok",
+        "name": "Tiktok View Bonus Like",
+        "price": 6,
+        "description": "(FAST)(NO REFIL)(RONDOM COUNTRY)(DROP 0-5%)"
+    },
+    {
+        "id": 18,
+        "platform": "TikTok",
+        "name": "Tiktok View (FAST)",
+        "price": 1,
+        "description": "(Instan Start)(Non Drop)(Unlimited)"
+    },
+    {
+        "id": 19,
+        "platform": "Instagram",
+        "name": "Instagram Channel Member",
+        "price": 18,
+        "description": "(Global)(MAX 1M)(HQ Real)(Instan)(No Refil)"
+    },
+    {
+        "id": 20,
+        "platform": "Instagram",
+        "name": "Instagram Channel Member (Refil)",
+        "price": 25,
+        "description": "(Global)(MAX 1M)(HQ Real)(Instan)(15 Days Refil)"
+    },
+    {
+        "id": 21,
+        "platform": "Instagram",
+        "name": "Instagram Costume Coment",
+        "price": 100,
+        "description": "(No Refil)(Slow)"
+    },
+    {
+        "id": 22,
+        "platform": "Instagram",
+        "name": "Instagram Costume Coment Indonesia",
+        "price": 330,
+        "description": "(No Refil)(HQ(Slow)"
+    },
+    {
+        "id": 23,
+        "platform": "Instagram",
+        "name": "Instagram Followers Indonesia",
+        "price": 100,
+        "description": "(Real Aktif)(Refil 7 Days)(MAX 3K)"
+    },
+    {
+        "id": 24,
+        "platform": "Instagram",
+        "name": "Instagram Followers Less Drop",
+        "price": 60,
+        "description": "(100k/Days)(Refil 14 Days)"
+    },
+    {
+        "id": 25,
+        "platform": "Instagram",
+        "name": "Instagram Followers Less Drop (SuperFast)",
+        "price": 90,
+        "description": "(100k/Days)(Refil 30 Days)"
+    },
+    {
+        "id": 26,
+        "platform": "Instagram",
+        "name": "Instagram Like Indonesia (Fast)",
+        "price": 15,
+        "description": "(Max 1k)(30 DayS Refil)"
+    },
+    {
+        "id": 27,
+        "platform": "Instagram",
+        "name": "Instagram Like (HQ)",
+        "price": 8,
+        "description": "(Fast)(Max 10k)(30 DayS Refil)"
+    },
+    {
+        "id": 28,
+        "platform": "Instagram",
+        "name": "Instagram Like (LQ)",
+        "price": 5,
+        "description": "(Slow)(Max 10k)(30 DayS Refil)"
+    },
+    {
+        "id": 29,
+        "platform": "Instagram",
+        "name": "Instaram Reels View",
+        "price": 1,
+        "description": "(MAX 1M)"
+    },
+    {
+        "id": 30,
+        "platform": "Instagram",
+        "name": "Instaram Reels Like",
+        "price": 15,
+        "description": "(MAX 1M)"
+    },
+    {
+        "id": 31,
+        "platform": "Instagram",
+        "name": "Instagram Share",
+        "price": 4,
+        "description": "(Speed 50k/Days)"
+    },
+    {
+        "id": 32,
+        "platform": "Instagram",
+        "name": "Instagram Story View Indonesia",
+        "price": 5,
+        "description": "(NO REFIL)"
+    },
+    {
+        "id": 33,
+        "platform": "Instagram",
+        "name": "Instagram Story View (HQ)",
+        "price": 3,
+        "description": "(All Story)(NO REFIL)"
+    },
+    {
+        "id": 34,
+        "platform": "Instagram",
+        "name": "Instagram View",
+        "price": 1,
+        "description": "(All Video Link)(No Refil)"
+    },
+    {
+        "id": 35,
+        "platform": "Instagram",
+        "name": "Instagram View Live",
+        "price": 200,
+        "description": "(Live Strem Video)(No Refil)"
+    },
+    {
+        "id": 36,
+        "platform": "YouTube",
+        "name": "Youtube Like",
+        "price": 4,
+        "description": "(Instan Start)(No Refil)(Max 1M)"
+    },
+    {
+        "id": 37,
+        "platform": "YouTube",
+        "name": "Youtube Like (Refil 7 Days)",
+        "price": 5,
+        "description": "(Instan Start)(Max 1M)"
+    },
+    {
+        "id": 38,
+        "platform": "YouTube",
+        "name": "Youtube Like Short",
+        "price": 25,
+        "description": "(No Refil)(Max 1M)"
+    },
+    {
+        "id": 39,
+        "platform": "YouTube",
+        "name": "Youtube Like Short (Refil)",
+        "price": 30,
+        "description": "(Max 1M)"
+    },
+    {
+        "id": 40,
+        "platform": "YouTube",
+        "name": "Youtube Subscribers (High Drop)",
+        "price": 25,
+        "description": "(No Komplain)(No Refil)"
+    },
+    {
+        "id": 41,
+        "platform": "YouTube",
+        "name": "Youtube Subscribers (Refil 7 Days)",
+        "price": 60,
+        "description": "(100 - 200/days)(MAX 10K)"
+    },
+    {
+        "id": 42,
+        "platform": "YouTube",
+        "name": "Youtube View",
+        "price": 32,
+        "description": "(99,9% Non Drop)(Direct+overdelivery)(max 25k/dats)"
+    },
+    {
+        "id": 43,
+        "platform": "YouTube",
+        "name": "Youtube View Jam Tayang (15 min video)",
+        "price": 370,
+        "description": "(Speed 100/Hours)(15 days refil)"
+    },
+    {
+        "id": 44,
+        "platform": "YouTube",
+        "name": "Youtube View Jam Tayang (30 min video)",
+        "price": 480,
+        "description": "(Speed 100/Hours)(15 days refil)"
+    },
+    {
+        "id": 45,
+        "platform": "YouTube",
+        "name": "Youtube View Jam Tayang (60 min video)",
+        "price": 1300,
+        "description": "(Speed 100/Hours)(15 days refil)"
+    },
+    {
+        "id": 46,
+        "platform": "Facebook",
+        "name": "Facebook Followers Profile",
+        "price": 20,
+        "description": "(No Refil)(100k/Days)"
+    },
+    {
+        "id": 47,
+        "platform": "Facebook",
+        "name": "Facebook Followers Profile (Refil 7 Days)",
+        "price": 26,
+        "description": "(100k/Days)"
+    },
+    {
+        "id": 48,
+        "platform": "Facebook",
+        "name": "Facebook Group Member",
+        "price": 20,
+        "description": "(MAX 10K)(NO REFIL)"
+    },
+    {
+        "id": 49,
+        "platform": "Facebook",
+        "name": "Facebook Post Like",
+        "price": 20,
+        "description": "(NO REFIL)(Real Profil)"
+    },
+    {
+        "id": 50,
+        "platform": "Facebook",
+        "name": "Facebook Post Like (Refil 7 days)",
+        "price": 24,
+        "description": "(Real Profil)"
+    },
+    {
+        "id": 51,
+        "platform": "Facebook",
+        "name": "Facebook Post Share",
+        "price": 10,
+        "description": "(Real Profil)(7 days refil)"
+    },
+    {
+        "id": 52,
+        "platform": "Tiktok Paket FYP",
+        "name": "Tiktok FYP V1",
+        "price": 98000,
+        "description": "PAKET FYP V1 (200.000 View)(100.000 Like)(10.000 Share)(1.000 Save/Favorit)"
+    },
+    {
+        "id": 53,
+        "platform": "Tiktok Paket FYP",
+        "name": "Tiktok FYP V2",
+        "price": 50000,
+        "description": "PAKET FYP V2 (100.000 View)(50.000 Like)(5.000 Share)(500 Save/Favorit)"
+    },
+    {
+        "id": 54,
+        "platform": "Tiktok Paket FYP",
+        "name": "Tiktok FYP V3",
+        "price": 30000,
+        "description": "PAKET FYP V3 (50.000 View)(10.000 Like)(3.000 Share)(3.000 Save/Favorit)"
+    },
+    {
+        "id": 55,
+        "platform": "Whatsapp",
+        "name": "Whatsapp Channel Post Reaction [ 👍 ]",
+        "price": 20,
+        "description": "(Max 1K) (Instant)"
+    },
+    {
+        "id": 56,
+        "platform": "Whatsapp",
+        "name": "Whatsapp Channel Post Reaction [ ❤️ ]",
+        "price": 20,
+        "description": "(Max 1K) (Instant)"
+    },
+    {
+        "id": 57,
+        "platform": "Whatsapp",
+        "name": "Whatsapp Channel Post Reaction [ 😂 ]",
+        "price": 20,
+        "description": "(Max 1K) (Instant)"
+    },
+    {
+        "id": 58,
+        "platform": "Whatsapp",
+        "name": "Whatsapp Channel Post Reaction [ Mix 👍❤️😂😲😥🙏 ]",
+        "price": 20,
+        "description": "(Max 50K) (Instant)"
+    },
+    {
+        "id": 59,
+        "platform": "Whatsapp",
+        "name": "Whatsapp Channel Member",
+        "price": 36,
+        "description": "(Global)(Max 50K)(HQ Profiles)(500/days)"
+    },
+    {
+        "id": 60,
+        "platform": "Telegram",
+        "name": "Telegram Channel Group/Member",
+        "price": 21,
+        "description": "(Global)(Max 100K)(7 Days Refil)(25k/days)"
+    },
+    {
+        "id": 61,
+        "platform": "Telegram",
+        "name": "Telegram Post View",
+        "price": 21,
+        "description": "(Superfast)(Max 50m)(No Refil)"
+    },
+    {
+        "id": 62,
+        "platform": "Telegram",
+        "name": "Telegram Positive Reaction (Mix + Views)",
+        "price": 21,
+        "description": "(Max 200K)(10K/days)(No Refil)"
+    },
+    {
+        "id": 63,
+        "platform": "Telegram",
+        "name": "Telegram Story View",
+        "price": 21,
+        "description": "(HQ Services)(Max: 500K)(50K/days)(No Refil)"
+    },
+    {
+        "id": 64,
+        "platform": "Google Maps",
+        "name": "Rating Only",
+        "price": 6000,
+        "description": "(HQ Services)(Max: 500K)(50K/days)(No Refil)"
+    },
+    {
+        "id": 65,
+        "platform": "Google Maps",
+        "name": "Rating dan Ulasan",
+        "price": 8500,
+        "description": "(HQ Services)(Max: 500K)(50K/days)(No Refil)"
+    },
+    {
+        "id": 66,
+        "platform": "Google Maps",
+        "name": "Rating dan Foto",
+        "price": 19000,
+        "description": "(HQ Services)(Max: 500K)(50K/days)(No Refil)"
+    },
+    {
+        "id": 67,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "YouTube",
+        "name": "YOUTUBE PREMIUM 1 BULAN",
+        "price": 6000,
+        "description": "garansi 25 hari"
+    },
+    {
+        "id": 68,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Prime Video",
+        "name": "PRIME VIDEO PRIVATE 1 BULAN",
+        "price": 14000,
+        "description": "garansi 10 hari"
+    },
+    {
+        "id": 69,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Youku",
+        "name": "YOUKU SHARING 1 BULAN",
+        "price": 9000,
+        "description": "garansi 25 hari"
+    },
+    {
+        "id": 70,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Bstation",
+        "name": "BSTATION SHARING 1 BULAN",
+        "price": 9000,
+        "description": "garansi 25 hari"
+    },
+    {
+        "id": 71,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Netflix",
+        "name": "NETFLIX SINGLE SCREEN 1 BULAN",
+        "price": 40000,
+        "description": "garansi 25 hari"
+    },
+    {
+        "id": 72,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Viu",
+        "name": "VIU PREMIUM PRIVATE 12 BULAN",
+        "price": 6000,
+        "description": "garansi 6 bulan"
+    },
+    {
+        "id": 73,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Drakor ID",
+        "name": "DRAKOR ID SHARING 12 BULAN",
+        "price": 15000,
+        "description": "garansi 6 bulan"
+    },
+    {
+        "id": 74,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "iQIYI",
+        "name": "IQIYI SHARING 1 BULAN",
+        "price": 10000,
+        "description": "garansi 25 hari"
+    },
+    {
+        "id": 75,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Gagaoolala",
+        "name": "GAGAOOLALA SHARING 1 BULAN",
+        "price": 9000,
+        "description": "garansi 25 hari"
+    },
+    {
+        "id": 76,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "ReelShort",
+        "name": "REELSHORT SHARING 1 BULAN",
+        "price": 18000,
+        "description": "garansi 25 hari S&K Berlaku"
+    },
+    {
+        "id": 77,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Mubi",
+        "name": "MUBI PREMIUM PRIVATE 1 BULAN",
+        "price": 9000,
+        "description": "garansi 10 hari"
+    },
+    {
+        "id": 78,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Viki",
+        "name": "VIKI PASS STANDAR PRIVATE 1 BULAN",
+        "price": 19000,
+        "description": "garansi 10 hari"
+    },
+    {
+        "id": 79,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Viki",
+        "name": "VIKI PASS STANDARD PRIVATE 7 HARI",
+        "price": 19000,
+        "description": "garansi 10 hari"
+    },
+    {
+        "id": 80,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Alight Motion",
+        "name": "ALIGHT MOTION PRIVATE ANDROID 12 BULAN",
+        "price": 6000,
+        "description": "garansi 3 bulan"
+    },
+    {
+        "id": 81,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "PhotoRoom",
+        "name": "PHOTOROOM PRO PRIVATE 7 HARI",
+        "price": 5000,
+        "description": "Non Garansi"
+    },
+    {
+        "id": 82,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Inshot",
+        "name": "INSHOT SHARING LIFETIME",
+        "price": 16000,
+        "description": "garansi 2 bulan"
+    },
+    {
+        "id": 83,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Canva",
+        "name": "CANVA EDUCATION LIFETIME",
+        "price": 20000,
+        "description": "GARANSI 3 BULAN"
+    },
+    {
+        "id": 84,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Picsart",
+        "name": "PICSART PRO PRIVATE 1 BULAN",
+        "price": 9000,
+        "description": "GARANSI 1 BULAN"
+    },
+    {
+        "id": 85,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "OldRoll",
+        "name": "OLDROLL SHARING LIFETIME ANDROID",
+        "price": 17000,
+        "description": "GARANSI 6 BULAN"
+    },
+    {
+        "id": 86,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "VSCO",
+        "name": "VSCO SHARING 12 BULAN ANDROID",
+        "price": 19000,
+        "description": "GARANSI 6 BULAN"
+    },
+    {
+        "id": 87,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Canva",
+        "name": "CANVA PRO HEAD 1 BULAN INVITE MAX 100",
+        "price": 50000,
+        "description": "GARANSI 1 BULAN"
+    },
+    {
+        "id": 88,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Canva",
+        "name": "CANVA PRO MEMBER 1 BULAN",
+        "price": 20000,
+        "description": "GARANSI 7 HARI"
+    },
+    {
+        "id": 89,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Capcut",
+        "name": "CAPCUT PRO SHARING 30 HARI",
+        "price": 25000,
+        "description": "GARANSI BF 7 HARI"
+    },
+    {
+        "id": 90,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Picsart",
+        "name": "PICART SHARING 1 BULAN",
+        "price": 5000,
+        "description": "GARANSI 7 HARI"
+    },
+    {
+        "id": 91,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Picsart",
+        "name": "PICART PRIVAT 1 BULAN",
+        "price": 7000,
+        "description": "GARANSI 7 HARI"
+    },
+    {
+        "id": 92,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Wink",
+        "name": "WINK 7 HARI SHARING",
+        "price": 12000,
+        "description": "GARANSI 7 HARI"
+    },
+    {
+        "id": 93,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Wink",
+        "name": "WINK 1 BULAN SHARING",
+        "price": 20000,
+        "description": "GARANSI 25 HARI"
+    },
+    {
+        "id": 94,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Wink",
+        "name": "WINK 1 BULAN PRIVAT",
+        "price": 25000,
+        "description": "GARANSI 25 HARI"
+    },
+    {
+        "id": 95,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Ibis Paint",
+        "name": "IBIS PAINT ANDROID 1 TAHUN",
+        "price": 24000,
+        "description": "GARANSI 6 BULAN"
+    },
+    {
+        "id": 96,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Meitu",
+        "name": "MEITU 1 BULAN ANDROID",
+        "price": 24000,
+        "description": "GARANSI 7 HARI"
+    },
+    {
+        "id": 97,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "VSCO",
+        "name": "VSCO ANDROID 1 TAHUN",
+        "price": 20000,
+        "description": "GARANSI 6 BULAN"
+    },
+    {
+        "id": 98,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Lightroom",
+        "name": "LIGHTROOM 1 TAHUN",
+        "price": 18000,
+        "description": "GARANSI 6 BULAN"
+    },
+    {
+        "id": 99,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "Remini",
+        "name": "REMINI 1 TAHUN",
+        "price": 20000,
+        "description": "GARANSI 6 BULAN"
+    },
+    {
+        "id": 100,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "VPN",
+        "name": "AVIRA VPN PRIVATE 3 BULAN",
+        "price": 10000,
+        "description": "GARANSI 3 BULAN"
+    },
+    {
+        "id": 101,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "VPN",
+        "name": "CODE REDEEM VPN SURFSHARK 90 HARI",
+        "price": 15000,
+        "description": "non garansi"
+    },
+    {
+        "id": 102,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "AI",
+        "name": "AI YOU SHARING 1 BULAN",
+        "price": 20000,
+        "description": "GARANSI 1 BULAN"
+    },
+    {
+        "id": 103,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "AI",
+        "name": "SCITE AI PREMIUM PRIVATE 7 DAY",
+        "price": 5000,
+        "description": "NON GARANSI"
+    },
+    {
+        "id": 104,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "ChatGPT",
+        "name": "CHATGPT PRIVATE 90 HARI AKUN BUYER",
+        "price": 200000,
+        "description": "GARANSI BF"
+    },
+    {
+        "id": 105,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "ChatGPT",
+        "name": "CHATGPT SHARING 90 HARI",
+        "price": 140000,
+        "description": "GARANSI BF"
+    },
+    {
+        "id": 106,
+        "platform": "Aplikasi Premium",
+        "sub_platform": "ChatGPT",
+        "name": "CHATGPT 1 SHARING 1 BULAN",
+        "price": 25000,
+        "description": "GARANSI 7 HARI"
+    }
+]
