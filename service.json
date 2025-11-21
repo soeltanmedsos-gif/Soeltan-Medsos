@@ -781,5 +781,13 @@
     "name": "YOUTUBE PREMIUM 1 BULAN",
     "price": 14000,
     "description": "garansi 25 hari"
-  }
+  },
+  {
+    "id": 107,
+    "platform": "Facebook",
+    "name": "Facebook Video View (Refil 7 Days)",
+    "price": 4,
+    "description": "(100k/Days)"
+    }
+
 ]
